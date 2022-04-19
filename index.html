@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--1.-Invocación CSS externa.-->
+    <link rel="stylesheet" href="css/style.css">
+    <title>CSS</title>
+    <!--2.-Invocación CSS interna.-->
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        h1 {
+            background-color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Aprendiendo CSS</h1>
+    <!--3.-Invocación CSS en línea.-->
+    <p><i style="font-weight: bold; color: #000000;">Cascading Style Sheets</i>: Lenguaje de definición de estilos
+        utilizado en páginas web.</p>
+    <article id="temario-css">
+        <h2>Temario</h2>
+        <ul>
+            <li type="square"><a href="index.html#selectores-basicos">Selectores Básicos</a></li>
+            <li type="square"><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
+            <li type="square"><a href="index.html#pseudoclases">Pseudoclases</a></li>
+            <li type="square"><a href="index.html#"></a></li>
+        </ul>
+    </article>
+    <hr>
+    <article id="selectores-basicos">
+        <h2>Selectores Básicos</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel necessitatibus quibusdam doloremque fugit,
+            minima dolore ipsum id suscipit molestias porro quae rerum, fuga magnam modi eligendi. Deleniti, quo magnam!
+        </p>
+        <p id="parrafo-dos"> 
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel necessitatibus quibusdam doloremque fugit,
+            minima dolore ipsum id suscipit molestias porro quae rerum, fuga magnam modi eligendi. Deleniti, quo magnam!
+        </p>
+        <p class="text-32 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel necessitatibus quibusdam doloremque fugit,
+            minima dolore ipsum id suscipit molestias porro quae rerum, fuga magnam modi eligendi. Deleniti, quo magnam!
+        </p>
+        <p class="text-20 bg-skyblue">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel necessitatibus quibusdam doloremque fugit,
+            minima dolore ipsum id suscipit molestias porro quae rerum, fuga magnam modi eligendi. Deleniti, quo magnam!
+        </p>
+        <p class="text-20 bg-steelblue text-white">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni vel necessitatibus quibusdam doloremque fugit,
+            minima dolore ipsum id suscipit molestias porro quae rerum, fuga magnam modi eligendi. Deleniti, quo magnam!
+        </p>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="selectores-avanzados">
+        <h2>Selectores Avanzados</h2>
+        <h3>Selectores de Hijos</h3>
+        <h4>Selector de hijos directos</h4>
+        <ul class="selector-hijos-directos">
+            <li>Verano</li>
+            <li>Otoño</li>
+            <li>Invierno</li>
+            <li>Primavera</li>
+        </ul>
+        <h4>Selector de hijos  descendientes</h4>
+        <ul class="selector-hijos-descendientes">
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+            <li><b>Primavera</b></li>
+        </ul>
+        <h3>Selectores de Hermanos</h3>
+        <h4>Selector de hermanos (general)</h4>
+        <ul>
+            <li>Verano</li>
+            <li class="selector-hermanos-general">Otoño</li>
+            <li>Invierno</li>
+            <li>Primavera</li>
+        </ul>
+        <h4>Selector de hermano adyacente</h4>
+        <ul>
+            <li>Verano</li>
+            <li class="selector-hermano-adyacente">Otoño</li>
+            <li>Invierno</li>
+            <li>Primavera</li>
+        </ul>
+        <h3>Selectores de Atributos</h3>
+        <ul class="selectores-atributos">
+            <li><a href="https://eloquentjavascript.net/" target="_blank">Eloquent Javascript</a></li>
+            <li><a class="link book-chapter" href="http://eloquentjavascript.net/03_functions.html" target="_blank">
+                Eloquent Javascript: Functions</a></li>
+            <li><a class="chapter-link" href="https://eloquentjavascript.net/06_object.html" target="_blank">
+                Eloquent Javascript: The Secret Life of Objects</a></li>
+            <li><a class="chapter book" href="http://eloquentjavascript.net/09_regexp.html" target="_blank">
+                Eloquent Javascript: Regular Expressions</a></li>
+            <li><a href="https://eloquentjavascript.net/12_language.html" target="_blank">
+                Eloquent Javascript: Project: A Programming Language</a></li>
+            <li><a href="http://eloquentjavascript.net/15_event.html" target="_blank">Eloquent Javascript: Handling Events</a></li>
+            <li><a href="index.html#temario-css" target="">Regresar al Temario</a></li>
+        </ul>
+        <h3>Selector Universal</h3>
+        <ul class="selector-universal">
+            <li><b>Verano</b></li>
+            <li><b>Otoño</b></li>
+            <li><b>Invierno</b></li>
+            <li><b>Primavera</b></li>
+        </ul>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="pseudoclases">
+        <h2>Pseudoclases</h2>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+
+</html>

@@ -1,0 +1,134 @@
+/* 
+Referencias y documentación.
+https://www.w3.org/html/logo/
+https://www.w3.org/standards/webdesign/htmlcss.html
+https://www.w3.org/TR/css-2020/
+https://developer.mozilla.org/es/docs/Web/CSS 
+*/
+
+/*
+Regla css consta de 2 partes.
+1.- Uno o más selectores.
+2.- Un bloque de declaraciones.
+    
+selector, selector2 {
+    atributo: valor;
+    atributo-mas-de-dos-palabras: otro-valor;
+}
+*/
+
+h1 {
+    background-color: #8d64cb;
+    color: #ffffff;
+}
+
+/* En CSS puro utilizar este modo de invocación de una hoja de estilos CSS dentro de otra hoja de estilos, 
+es una mala práctica debido a que presenta un comportamiento bloqueante a la hora de ser leído por el navegador. */
+/* @import url(another-style-sheet.css); */
+
+/* 
+Selectores básicos:
+1.- Elementos HTML     Etiquetas         Nombre etiqueta    No recomendado   
+2.- Identificadores    Atributo id       #                  No recomendado 
+3.- Clases             Atributo class    .                  Recomendado 
+*/
+
+/* El riesgo de usar una etiqueta como selector es que puede que añada estilos
+a un elemento que realmente no los necesita. Evitar en lo posible su uso. */
+p {
+    color: midnightblue;
+}
+
+/* Usar como selector un identificador es un antipatrón, una de las ventajas que no puede ofrecer CSS
+es su  capacidad de reutilizar código, usar Id desaprovecha esa opción. Evitar en lo posible su uso. */
+#parrafo-dos {
+    background-color: skyblue;
+}
+
+/* Elegir como nombres de clase algo autodescriptivo en relación al estilo que añade. */
+/* Nota: Si ordeno el código alfabeticamente en base al selector, resultará más fácil encontrar una regla determinada. */
+.bg-skyblue {
+    background-color: skyblue;
+}
+
+.bg-steelblue {
+    background-color: steelblue;
+}
+
+.text-32 {
+    font-size: 32px;
+}
+
+.text-20 {
+    font-size: 20px;
+}
+
+.text-white  {
+    color: white;
+}
+
+.selector-hijos-directos > li {
+    background-color: darkcyan;
+}
+
+.selector-hijos-descendientes b{
+    background-color: darkcyan;
+}
+
+/* Las reglas con selectores hermanos solo añaden estilos a los hermanos que estén por debajo del selector
+indicado como referencia. */
+.selector-hermanos-general ~ li {
+    background-color: darkcyan;
+}
+
+.selector-hermano-adyacente + li {
+    background-color: darkcyan;
+}
+
+/* Selectores de Atributos. */
+.selectores-atributos a[href] {
+    color: green;
+}
+
+.selectores-atributos a[target="_blank"]{
+    font-weight: bold;
+}
+
+/* El comodín (*) selecciona a todos los elementos que contengan la palabra especificada
+en el atributo indicado. */
+.selectores-atributos a[href*="eloquentjavascript"] {
+    font-size: 20px;
+}
+
+/* El circunflejo (^) selecciona a todos los elementos que contengan la palabra especificada
+al INICIO del atributo indicado. */
+.selectores-atributos a[href^="http:"] {
+    text-decoration: none;
+}
+
+/* El signo dolar ($) selecciona a todos los elementos que contengan la palabra especificada
+al FINAL del atributo indicado. */
+.selectores-atributos a[href$=".net/"] {
+    background-color: #000000;
+}
+
+/* La virgulilla (~) selecciona a los elementos que contengan la palabra escpecificada dentro
+de una lista de palabras separadas en el atributo indicado. */
+.selectores-atributos a[class~="link"] {
+    background-color: midnightblue;
+}
+
+/* La pleca (|) selecciona a los elementos que contengan la palabra especificada y que luego
+de ella inmediatamente le siga un guión (-) en el atributo indicado. */
+.selectores-atributos a[class|="chapter"] {
+    background-color: lightblue;
+}
+
+/* Selector Universal (*) */
+* {
+    font-family: sans-serif;
+}
+
+.selector-universal *{
+    font-size: 20px;
+}
