@@ -132,3 +132,119 @@ de ella inmediatamente le siga un guión (-) en el atributo indicado. */
 .selector-universal *{
     font-size: 20px;
 }
+
+/* Pseudoclases son una palabra especial que se le añade a los selectores e indican un estado,
+cuando el elemento del selector cumple con dicho estado, se le añaden los estilos especificados. */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */
+
+.pseudoclases-estado *:required{
+    border-color: yellow;
+}
+
+
+.pseudoclases-estado *:valid{
+    border-color: green;
+}
+
+.pseudoclases-estado *:invalid{
+    border-color: red;
+}
+
+.pseudoclases-estado *:focus{
+    background-color: skyblue;
+}
+
+.pseudoclases-estado *:disabled{
+    background-color: lightcyan;
+}
+
+/* El orden de las pseudoclases en el código CSS  es importante, pueden solaparse los estilos entre pseudoclases. */
+.menu-pseudoclases a:visited {
+    color: olive;
+}
+
+.menu-pseudoclases a:hover {
+    color: orange;
+}
+
+.p-pseudoclases-estado:hover {
+    font-size: 20px;
+}
+
+#temario-css:target {
+    border: 5px solid black;
+}
+
+/* PSEUDOCLASES DE POSICIÓN. */
+.pseudoclases-posicion li:first-child {
+    background-color: navy;
+}
+
+
+.pseudoclases-posicion li:nth-child(2) {
+    background-color: crimson;
+}
+
+.pseudoclases-posicion li:nth-child(3n) {
+    background-color: khaki;
+}
+
+.pseudoclases-posicion li:last-child {
+    background-color: olive;
+}
+
+.pseudoclases-posicion li:nth-child(2) {
+    background-color: crimson;
+}
+
+/* PSEUDOCLASES DE TIPO. */
+/* La condición de la siguiente regla no se cummple, dado que el first child del elemento
+.pseudoclases-tipo no es una p, para estos casos usar pseudoclases de tipo. */
+.pseudoclases-tipo p:first-child {
+    background-color: crimson;
+}
+
+.pseudoclases-tipo p:first-of-type {
+    background-color: navy;
+}
+
+.pseudoclases-tipo div:last-of-type {
+    background-color: olive;
+}
+
+.pseudoclases-tipo p:nth-of-type(3) {
+    background-color: crimson;
+}
+
+.pseudoclases-tipo *:not(p, div) {
+    background-color: khaki;
+}
+
+/* Los PSEUDOELEMENTOS añaden estilos a una parte específica de un elemento HTML. */
+/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements */
+
+.span-pseudoelementos::before {
+    content: "Son palabras especiales que ";
+}
+
+.span-pseudoelementos::after {
+    content: " de un elemento HTML.";
+}
+
+.p-pseudoelementos::first-letter {
+    font-size: 32px;
+}
+
+.p-pseudoelementos::first-line {
+    color: midnightblue;
+}
+
+.p-pseudoelementos::selection {
+    background-color: navy;
+    color: lightblue;
+}
+
+.input-pseudoelementos::placeholder {
+    color: green;
+}
+
