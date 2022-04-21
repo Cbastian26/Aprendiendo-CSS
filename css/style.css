@@ -17,14 +17,14 @@ selector, selector2 {
 }
 */
 
+/* En CSS puro utilizar este modo de invocación de una hoja de estilos CSS dentro de otra hoja de estilos, 
+es una mala práctica debido a que presenta un comportamiento bloqueante a la hora de ser leído por el navegador. */
+/* @import url(another-style-sheet.css); Nota: El @import debe ir antes que cualquier código CSS para ser funcional.*/
+
 h1 {
     background-color: #8d64cb;
     color: #ffffff;
 }
-
-/* En CSS puro utilizar este modo de invocación de una hoja de estilos CSS dentro de otra hoja de estilos, 
-es una mala práctica debido a que presenta un comportamiento bloqueante a la hora de ser leído por el navegador. */
-/* @import url(another-style-sheet.css); */
 
 /* 
 Selectores básicos:
@@ -67,6 +67,9 @@ es su  capacidad de reutilizar código, usar Id desaprovecha esa opción. Evitar
     color: white;
 }
 
+/* 
+SELECTORESS AVANZADOS.
+*/
 .selector-hijos-directos > li {
     background-color: darkcyan;
 }
@@ -85,7 +88,7 @@ indicado como referencia. */
     background-color: darkcyan;
 }
 
-/* Selectores de Atributos. */
+/* SELECTORES DE ATRIBUTOS. */
 .selectores-atributos a[href] {
     color: green;
 }
@@ -124,7 +127,9 @@ de ella inmediatamente le siga un guión (-) en el atributo indicado. */
     background-color: lightblue;
 }
 
-/* Selector Universal (*) */
+/* 
+SELECTOR UNIVERSAL. (*) 
+*/
 * {
     font-family: sans-serif;
 }
@@ -133,9 +138,12 @@ de ella inmediatamente le siga un guión (-) en el atributo indicado. */
     font-size: 20px;
 }
 
-/* Pseudoclases son una palabra especial que se le añade a los selectores e indican un estado,
-cuando el elemento del selector cumple con dicho estado, se le añaden los estilos especificados. */
-/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes */
+/*
+PSEUDOCLASES.
+Son una serie de palabras especiales que se le añaden a los selectores e indican un estado,
+cuando el elemento del selector cumple con dicho estado, se le añaden los estilos especificados. 
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes 
+*/
 
 .pseudoclases-estado *:required{
     border-color: yellow;
@@ -220,8 +228,12 @@ cuando el elemento del selector cumple con dicho estado, se le añaden los estil
     background-color: khaki;
 }
 
-/* Los PSEUDOELEMENTOS añaden estilos a una parte específica de un elemento HTML. */
-/* https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements */
+/* 
+LOS PSEUDOELEMENTOS 
+añaden estilos a una parte específica de un elemento HTML.
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements 
+Los pseudoelementos tienen mayor jerarquia que los elementos comunes. 
+*/
 
 .span-pseudoelementos::before {
     content: "Son palabras especiales que ";
@@ -236,7 +248,7 @@ cuando el elemento del selector cumple con dicho estado, se le añaden los estil
 }
 
 .p-pseudoelementos::first-line {
-    color: midnightblue;
+    color: midnightbluwe;
 }
 
 .p-pseudoelementos::selection {
@@ -247,4 +259,148 @@ cuando el elemento del selector cumple con dicho estado, se le añaden los estil
 .input-pseudoelementos::placeholder {
     color: green;
 }
+
+/* 
+AGRUPACIÓN DE SELECTORES. 
+*/
+.form-agrupacion-selectores input[type="text"],
+.form-agrupacion-selectores input[type="email"],
+.form-agrupacion-selectores textarea {
+    display: block;
+    width: 300px;
+    background-color: black;
+    color: white;
+    border: 2px dashed yellow;
+    outline: none;
+}
+
+/* 
+COMBINACIÓN DE SELECTORES
+Las combinacion siguientes son solo experimentación. No representa un modelo de escritura idónea en CSS. 
+Se considera una mala práctica agregar mas de dos niveles de selectores, dado que eleva el valor de la especificidad.
+También se considera mala práctica utilizar los Id como selectores, estos elevan la especificidad en una unidad en el
+tercer digito. Evitar en la medida de lo posible.
+Si es que de todas formas se incurrirá en la mala práctica de usar un selector de más de dos niveles, usar el siguiente orden:
+etiqueta#id.class[attribute]
+*/
+.form-combinacion-selectores input.input-combinacion-selectores[type="text"]#input-text-combinacion-selectores,
+.form-combinacion-selectores .input-combinacion-selectores[type="email"] #input-email-combinacion-selectores,
+.form-combinacion-selectores #input-submit-combinacion-selectores[type="submit"].input-combinacion-selectores {
+    background-color: black;
+    display: block;
+}
+
+/* Si hay un espaciado que indique que determinado elemento esta dentro de otro, puedo hacer saltos de línea
+y seguira aplicando estilos, por el contrario, si en el selector no deberia haber un espaciado obviamente no
+aplica los estilos si se hace un salto de linea */
+.form-combinacion-selectores 
+#input-email-combinacion-selectores[type="email"].input-combinacion-selectores::placeholder {
+    color: yellowgreen;
+    display: block;
+}
+
+.form-combinacion-selectores #input-text-combinacion-selectores[type="text"]
+.input-combinacion-selectores::placeholder {
+    color: yellowgreen;
+}
+
+.form-combinacion-selectores #input-submit-combinacion-selectores[type="submit"].input-combinacion-selectores {
+    color: skyblue;
+}
+
+/* 
+EL ALGORITMO DE CSS
+Es la forma en que CSS va aplicando los estilos a un documento HTML en el navegador.
+Entender como funciona esto es vital para poder añadir estilos de forma efectiva y comprender
+en algunos casos como se sobreescriben las reglas CSS 
+1.- La Cascada.
+2.- La Especificidad.
+3.- La Herencia. 
+
+LA CASCADA
+Es el mecanismo de orden por el cual el navegador va aplicando lo estilos,
+si un mismo elemento presenta más de un valor para el mismo atributo la cascada
+añadirá como estilo el último valor dado a ese atributo, siempre y cuando tengan
+el mismo nivel de especificidad. Este mecanismo toma en cuenta lo siguiente, y en
+este orden:
+1.- Origen del Código.
+    -El User Agent (estilos por defecto del navegador).
+    -Personalización del Usuario.
+    -Los Estilos del Autor (estilos del CSS).
+2.-La Especificidad del Selector.
+3.-Orden de Aparición.
+
+LA ESPECIFICIDAD
+Es el peso que tiene un selector, mientras más alto el peso más prioridad le dará
+el algoritmo de CSS a la hora de añadir los estilos de este selector, por sobre estilos
+que sean definidos en reglas posteriores ignorando el efecto cascada.
+Se calcula de la siguiente manera:
+Etiquetas y Pseudoelementos-----------------0,0,0,1
+Clases, Atributos y Pseudoclases------------0,0,1,0
+Identificadores-----------------------------0,1,0,0
+Estilos en línea----------------------------1,0,0,0
+!important-------------------Rompe la especificidad
+
+LA HERENCIA
+Es la capacidad de un selector ded obtener (heredar) los estilos de su ancestro más cercano,
+hay propiedades que se heredan por defecto (tipografias por ejemplo) si no se les da un valor,
+y otras que se pueden heredar con el valor inherit.
+https://web.dev/learn/css/inheritance/#which-properties-are-inheritable
+*/
+
+blockquote#cite-marcus.cite-marcus {
+    background-color: crimson;
+}
+  
+blockquote {
+    background-color: burlywood;
+}
+
+#cite-marcus {
+    background-color: oldlace;
+}
+
+blockquote.cite-marcus {
+    background-color: teal;
+}
+
+.cite-marcus {
+    background-color: skyblue;
+}
+
+.cite-marcus {
+    background-color: seagreen !important;
+}
+
+blockquote#cite-marcus {
+    background-color: steelblue;
+}
+
+.cite-marcus {
+    background-color: darkorange !important;
+    background-color: navy !important;
+    color: antiquewhite;
+    font-size: 32px;
+    border-style: dotted;
+    border-color: white;
+}
+
+.cite-marcus cite {
+    background-color: pink;
+    background-color: inherit;
+    font-size: 20px;
+    font-size: initial;
+    border-style: inherit;
+    border-color: inherit;
+}
+
+/* 
+PREFIJOS DE LOS NAVEGADORES
+https://autoprefixer.github.io/
+https://caniuse.com/
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+*/
 

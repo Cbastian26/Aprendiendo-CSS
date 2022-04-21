@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--1.-Invocación CSS externa.-->
+    <!-- <link rel="stylesheet" href="css/reset.css"> -->
+    <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <title>CSS</title>
     <!--2.-Invocación CSS interna.-->
@@ -16,6 +18,7 @@
 
         h1 {
             background-color: #000000;
+            text-align: center;
         }
     </style>
 </head>
@@ -32,7 +35,11 @@
             <li type="square"><a href="index.html#selectores-avanzados">Selectores Avanzados</a></li>
             <li type="square"><a href="index.html#pseudoclases">Pseudoclases</a></li>
             <li type="square"><a href="index.html#pseudoelementos">Pseudoelementos</a></li>
-            <li type="square"><a href="index.html#"></a></li>
+            <li type="square"><a href="index.html#agrupacion-selectores">Agrupación de Selectores</a></li>
+            <li type="square"><a href="index.html#combinacion-selectores">Combinación de Selectores</a></li>
+            <li type="square"><a href="index.html#algoritmo-css">El algoritmo de CSS</a></li>
+            <li type="square"><a href="index.html#reseteo-normalizacion-estilos">Reseteo y Normalización de estilos</a></li>
+            <li type="square"><a href="index.html#prefijos-navegadores">Prefijos de los Navegadores</a></li>
             <li type="square"><a href="index.html#"></a></li>
             <li type="square"><a href="index.html#"></a></li>
         </ul>
@@ -189,6 +196,71 @@
         </p>
         <input type="text" name="nombre" class="input-pseudoelementos" placeholder="Escribe tu nombre">
         <br>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="agrupacion-selectores">
+        <h2>Agrupación de Selectores</h2>
+        <form class="form-agrupacion-selectores">
+            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="email" name="email" placeholder="Correo">
+            <textarea name="comentario" placeholder="Escribe aquí tu comentario" cols="30" rows="10"></textarea>
+            <input type="submit">
+        </form>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="combinacion-selectores">
+        <h2>Combinación de Selectores</h2>
+        <form class="form-combinacion-selectores" autocomplete="off">
+            <input type="text" class="input-combinacion-selectores" id="input-text-combinacion-selectores"
+                name="nombre" placeholder="Nombre">
+            <input type="email" class="input-combinacion-selectores" id="input-email-combinacion-selectores"
+                name="email" placeholder="Correo">
+            <input type="submit" class="input-combinacion-selectores" id="input-submit-combinacion-selectores">
+        </form>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="algoritmo-css">
+        <h2>El algoritmo de CSS</h2>
+        <ol>
+            <li>La Cascada</li>
+            <li>La Especificidad</li>
+            <li>La Herencia</li>
+        </ol>
+        <blockquote class="cite-marcus" id="cite-marcus">Be tolerant with others and strict with yourself -
+            <cite> <i>Marcus Aurelius</i></cite>
+        </blockquote>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="reseteo-normalizacion-estilos">
+        <h2>Reseteo y Normalización de estilos</h2>
+        <h3>Reset CSS</h3>
+        <p>Se usa para resetear las propiedades de CSS. Opción no recomendada actualmente.</p>
+        <h3>Normalize CSS</h3>
+        <p>Se usa para normalizar los estilos CSS. Opción más usada y recomendada actualmente.</p>
+        <a href="index.html#temario-css">
+            <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
+        </a>
+    </article>
+    <hr>
+    <article id="prefijos-navegadores">
+        <h2>Prefijos de los Navegadores</h2>
+        <ul>
+            <li>Navegadores de Microsoft: <code><b>-ms-</b></code></li>
+            <li>Firefox: <code><b>-moz-</b></code></li></li>
+            <li>Otros navegadores: <code><b>-webkit-</b></code></li></li>
+        </ul>
         <a href="index.html#temario-css">
             <img src="assets/img/up-arrow-square-black.svg" alt="Up-Arrow">
         </a>
