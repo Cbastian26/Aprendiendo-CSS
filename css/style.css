@@ -26,6 +26,12 @@ h1 {
     color: #ffffff;
 }
 
+code {
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 10px;
+}
+
 /* 
 Selectores básicos:
 1.- Elementos HTML     Etiquetas         Nombre etiqueta    No recomendado   
@@ -186,6 +192,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 /* PSEUDOCLASES DE POSICIÓN. */
 .pseudoclases-posicion li:first-child {
     background-color: navy;
+    color: whitesmoke;
 }
 
 
@@ -214,6 +221,7 @@ https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-classes
 
 .pseudoclases-tipo p:first-of-type {
     background-color: navy;
+    color: whitesmoke;
 }
 
 .pseudoclases-tipo div:last-of-type {
@@ -287,6 +295,7 @@ etiqueta#id.class[attribute]
 .form-combinacion-selectores .input-combinacion-selectores[type="email"] #input-email-combinacion-selectores,
 .form-combinacion-selectores #input-submit-combinacion-selectores[type="submit"].input-combinacion-selectores {
     background-color: black;
+    color: whitesmoke;
     display: block;
 }
 

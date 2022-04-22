@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/box-model.css">
+    <title>Modelo de Caja en CSS</title>
+</head>
+<body>
+    <a href="index.html#temario-css">
+        <img src="assets/img/left-arrow-square-svgrepo-com.svg" alt="Back-Arrow">
+    </a>
+    <h1>Modelo de Caja en CSS</h1>
+    <pre>
+EL MODELO DE CAJA EN CSS
+Es la manera en que CSS percibe los elementos HTML, es un modelo conceptual de una caja ordinaria.
+En base a este modelo de caja CSS añade estilos a las etiquetas.
+Las cajas se componen de la siguiente manera: 
+1.- Margin: Es la distancia espaciada entre el borde de la caja de un elemento HTML,
+    y otro elemento HTML. (Distancia externa).
+2.- Border: Es la linea limitrofe de la caja de un elemento HTML.
+3.- Padding: Es la distancia espaciada entre el borde de la caja de un elemento, y el contenido
+    de dicho elemento HTML. (Distancia interna).
+4.- Content: Es el contenido de un elemento HTML. Tomando en cuenta dos dimensiones, height y width.
+    </pre>
+    <hr>
+    <div class="caja-uno">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolore nihil,
+        accusantium deserunt cum quod voluptas rem vel molestias suscipit praesentium ratione sit numquam sunt
+        in totam quo fugit repellendus.
+    </div>
+    <div class="caja-dos">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dolore nihil,
+        accusantium deserunt cum quod voluptas rem vel molestias suscipit praesentium ratione sit numquam sunt
+        in totam quo fugit repellendus.
+    </div>
+    <hr>
+    <h2>Cajas en Línea vs Cajas en Bloque</h2>
+    <span class="caja-linea">Esto es una caja en línea</span><span class="caja-linea-span">Esto es una caja en línea</span>
+    <div class="caja-bloque">Esto es una caja en bloque</div>
+    <hr>
+    <h2>Propiedad Display</h2>
+    <span class="display-span">Esto es un span</span>
+    <span class="display-span">Esto es un span</span>
+    <div class="display-div">Esto es un div</div>
+    <span class="display-span">Esto es un span</span>
+    <div class="display-div-none">Esto es un div display: "none";</div>
+    <hr>
+    <h2>Propiedad Visibility</h2>
+    <div class="visibility-display-none">Esto es un div display: "none"</div>
+    <div class="visibility-hidden">Esto es un div visibility: "hidden"</div>
+    <p>
+        La diferencia entre <code>display: "none"</code> y 
+        <code>visibility: "hidden"</code> es que con el primero es como
+        si el elemento no existiese, en cambio con hidden el elemento
+        se oculta a la vista, pero sigue ahi, al igual que su espacio en el DOM.
+    </p>
+    <hr>
+    <h2>Propiedad Overflow</h2>
+    <p class="p-overflow-1">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </p>
+    <p class="p-overflow-2">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </p>
+    <p class="p-overflow-3">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </p>
+    <p class="p-overflow-4">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </p>
+    <hr>
+    <h2>Box-Sizing</h2>
+    <code>box-sizing: content-box;</code>
+    <div class="box-sizing-content">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </div>
+    <code>box-sizing: border;</code>
+    <div class="box-sizing-border">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
+        odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
+        laudantium! Vitae corrupti molestiae praesentium tempora.
+    </div>
+    <a href="index.html#temario-css">
+        <img src="assets/img/left-arrow-square-svgrepo-com.svg" alt="Back-Arrow">
+    </a>
+</body>
+</html>

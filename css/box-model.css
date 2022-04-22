@@ -1,0 +1,190 @@
+code {
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 3px;
+}
+
+/*
+EL MODELO DE CAJA EN CSS
+Es la manera en que CSS percibe los elementos HTML, es un modelo conceptual de una caja ordinaria.
+En base a este modelo de caja CSS añade estilos a las etiquetas.
+Las cajas se componen de la siguiente manera: 
+1.- Margin: Es la distancia espaciada entre el borde de la caja de un elemento HTML,
+    y otro elemento HTML. (Distancia externa).
+2.- Border: Es la linea limitrofe de la caja de un elemento HTML.
+3.- Padding: Es la distancia espaciada entre el borde de la caja de un elemento, y el contenido
+    de dicho elemento HTML. (Distancia interna).
+4.- Content: Es el contenido de un elemento HTML. Tomando en cuenta dos dimensiones, height y width.
+
+Dentro de una caja encontramos cuatro lados y CSS aplica los estilos en el sentido de las manecillas
+del reloj:
+1.-Arriba (top).
+2.-Derecha (right).
+3.-Abajo (bottoms).
+4.-Izquierda (left).
+*/
+
+
+h1 {
+    margin: auto;
+    text-align: center;
+    height: 200px;
+    width: 400px;
+    /* Propiedades de tipo Shorthand. */
+    border-color: steelblue;
+    border-bottom-color: green;
+    border-style: solid;
+    border-width: thick; /* thin = 1px / medium = 3px / thick = 5px */
+    border: 2px dashed black;
+}
+
+pre {
+    white-space: pre-wrap;
+}
+
+.caja-uno,
+.caja-dos {
+    border: thin dashed black;
+    padding: 20px;
+    margin: 20px;
+}
+
+.caja-uno{
+    padding: 0;
+    margin: 40px;
+}
+
+/* 
+CAJAS EN LÍNEA VS CAJAS EN BLOQUE
+
+LAS CAJAS EN LÍNEA
+presentan las siguientes características:
+1.- Ocupan el espacio necesario indicado por su contenido.
+2.- Sus propiedades dimensionales height y width NO son modificables.
+3.- Las propiedades padding y margin solo mueven el contenido en el eje horizontal,
+    jamas en la vertical, dado que estas cajas siempre su eje vertical se mantiene
+    en la misma línea, de ahi su nombre, debido a esto es mejor evitar ponerles
+    paddings en la vertical y evitar solapamientos de unas cajas con otras.  
+LAS CAJAS EN BLOQUE
+presentan las siguientes características: 
+1.- Ocupan todo el espacio en la horizontal, generando saltos de línea.
+2.- Sus propiedades dimensinales height y width SON modificables.
+3.- Dado que ocupan todo el espacio en la horizontal, no permiten que otros elementos
+    se situen en la misma línea, aun cuando su width definido no utilice todo el espacio
+    disponible en el eje X.
+*/
+.caja-linea,
+.caja-bloque,
+.caja-linea-span {
+    border: thin dashed black;
+}
+
+.caja-bloque {
+    margin: 20px;
+    padding: 40px;
+}
+
+
+.caja-linea {
+    margin: 40px;
+    padding: 40px;
+}
+
+/* 
+PROPIEDAD DISPLAY
+valores:
+  inline
+  block
+  inline-block: Los elementos pueden ser modificados en sus dimensiones.
+                Admiten otros elementos en la misma línea.
+                No presentan los problemas de inline con padding y margin vertical.
+  none
+  table
+  list-item
+  flex          Estudiar por separado, tema extenso.
+  -grid         Estudiar por separado, tema extenso.
+*/
+
+.display-div,
+.display-span,
+.display-div-none {
+    border: thin dashed black;
+}
+
+.display-span {
+    height: 140px;
+    width: 280px;
+    display: inline-block;
+    margin: 2px;
+    padding: 5px;
+}
+
+.display-div,
+.display-div-none {
+    height: 140px;
+    width: 280px;
+    display: inline-block;
+}
+
+.display-div-none {
+    display: none;
+}
+
+/* 
+PROPIEDAD VISIBILITY
+*/
+.visibility-display-none,
+.visibility-hidden {
+    border: thin dashed black;
+    margin: 10px;
+    height: 100px;
+    visibility: hidden;
+}
+
+.visibility-display-none {
+    display: none;
+}
+
+/* 
+PROPIEDAD OVERFLOW
+*/
+.p-overflow-1,
+.p-overflow-2,
+.p-overflow-3,
+.p-overflow-4 {
+    border: thin dashed black;
+    height: 100px;
+    width: 200px;
+    display: inline-block;
+    overflow: visible; /* Default */
+}
+
+.p-overflow-2 {
+    overflow: hidden;
+}
+
+.p-overflow-3 {
+    overflow: scroll;
+}
+
+.p-overflow-4 {
+    overflow: auto;
+}
+
+/* 
+Box-Sizing
+*/
+
+.box-sizing-content,
+.box-sizing-border {
+    border: thin dashed black;
+    height: 200px;
+    width: 400px;
+    box-sizing: content-box;
+    margin: 5px;
+    padding: 20px;
+}
+
+.box-sizing-border {
+    box-sizing: border-box;
+}
