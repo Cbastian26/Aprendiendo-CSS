@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
     <pre>
 EL MODELO DE CAJA EN CSS
 Es la manera en que CSS percibe los elementos HTML, es un modelo conceptual de una caja ordinaria.
-En base a este modelo de caja CSS añade estilos a las etiquetas.
+En base a este modelo de caja es que CSS añade estilos a las etiquetas.
 Las cajas se componen de la siguiente manera: 
 1.- Margin: Es la distancia espaciada entre el borde de la caja de un elemento HTML,
     y otro elemento HTML. (Distancia externa).
@@ -86,12 +86,55 @@ Las cajas se componen de la siguiente manera:
         odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
         laudantium! Vitae corrupti molestiae praesentium tempora.
     </div>
+    <div class="box-sizing-content-float">
+        <div>602px</div>
+        <span>202px</span>
+        <span>202px</span>
+        <span>202px</span>
+    </div>
     <code>box-sizing: border;</code>
     <div class="box-sizing-border">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquam a quae nostrum
         odit iure eius harum eaque temporibus rem enim? Quibusdam vero quas suscipit
         laudantium! Vitae corrupti molestiae praesentium tempora.
     </div>
+    <div class="box-sizing-border-float">
+        <div>600px</div>
+        <span>200px</span>
+        <span>200px</span>
+        <span>200px</span>
+    </div>
+    <hr>
+    <h2>Propiedades Float y Clear</h2>
+    <article class="float-container">
+        <div>div</div>
+        <section class="float-right">Floto a la derecha</section>
+        <div>div</div>
+        <section class="float-left">Floto a la izquierda</section>
+        <div>div</div>
+        <section class="float-right">Floto a la derecha</section>
+        <section class="float-left">Floto a la izquierda</section>
+        <div>div</div>
+        <section class="float-right">Floto a la derecha</section>
+        <section class="float-left">Floto a la izquierda</section>
+        <div class="float-clear"></div>
+        <div>div</div>
+    </article>
+    <hr>
+    <h2>Comportamiento de Margenes</h2>
+    <article class="margin-container">
+        <section>Caja Uno</section>
+        <section>Caja Dos</section>
+        <section>Caja Tres</section>
+        <span>Caja 4</span><span>Caja 5</span><span>Caja 6</span><span>Caja 7</span><span class="negative-m">Caja con margen negativos</span>
+    </article>
+    <hr>
+    <h2>Centrado de cajas</h2>
+    <article class="web-site-simulator">
+        <header>Esto es un header</header>
+        <main>Esto es un main</main>
+        <footer>Esto es un footer</footer>
+    </article>
     <a href="index.html#temario-css">
         <img src="assets/img/left-arrow-square-svgrepo-com.svg" alt="Back-Arrow">
     </a>

@@ -4,10 +4,14 @@ code {
     border-radius: 3px;
 }
 
+h2 {
+    text-align: center;
+}
+
 /*
 EL MODELO DE CAJA EN CSS
 Es la manera en que CSS percibe los elementos HTML, es un modelo conceptual de una caja ordinaria.
-En base a este modelo de caja CSS añade estilos a las etiquetas.
+En base a este modelo de caja es que CSS añade estilos a las etiquetas.
 Las cajas se componen de la siguiente manera: 
 1.- Margin: Es la distancia espaciada entre el borde de la caja de un elemento HTML,
     y otro elemento HTML. (Distancia externa).
@@ -187,4 +191,118 @@ Box-Sizing
 
 .box-sizing-border {
     box-sizing: border-box;
+}
+
+.box-sizing-content-float {
+    border: thin dashed black;
+    width: 600px;
+    height: 100px;
+}
+
+.box-sizing-content-float > *{
+    border: thin dashed black;
+    text-align: center;
+}
+
+.box-sizing-content-float > span {
+    width: 200px;
+    float: left;
+    box-sizing: content-box;
+}
+
+.box-sizing-border-float {
+    border: thin dashed black;
+    width: 600px;
+    height: 100px;
+}
+
+.box-sizing-border-float > *{
+    border: thin dashed black;
+    text-align: center;
+}
+
+.box-sizing-border-float > span {
+    width: 200px;
+    float: left;
+    box-sizing: border-box;
+}
+
+
+/* 
+PROPIEDAD FLOAT
+*/
+.float-container > div {
+    border: thin dashed black;
+    text-align: center;
+}
+.float-right {
+    float: right;
+    border: thin dashed gold;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-clear {
+    clear: both;
+}
+
+/* 
+COMPORTAMIENTO DE MARGENES
+*/
+.margin-container {
+    border: thin dashed black;
+    margin-top: 10px;
+}
+
+.margin-container > section {
+    border: thin dashed black;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.margin-container > span {
+    border: thin dashed black;
+    text-align: center;
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+span.negative-m {
+    margin-left: -20px;
+}
+
+/* 
+CENTRADO DE CAJAS
+*/
+.web-site-simulator,
+.web-site-simulator > * {
+    border: thin dashed black;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.web-site-simulator {
+    height: 600px;
+}
+
+.web-site-simulator > * {
+    width: 50%;
+    min-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.web-site-simulator > header {
+    height: 5%;
+}
+
+.web-site-simulator > main {
+    height: 90%;
+}
+
+.web-site-simulator > footer {
+    height: 5%;
 }

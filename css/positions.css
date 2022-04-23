@@ -1,0 +1,149 @@
+code {
+    background-color: black;
+    color: antiquewhite;
+    border-radius: 3px;
+}
+
+h1 {
+    background-color: black;
+    color: antiquewhite;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.div-espaciador{
+    height: 500px;
+}
+
+/*
+POSICIONAMIENTO EN CSS
+
+El flujo natural de posicionamiento en el navegador es por orden de apariciónen el documento HTML y 
+la forma de visualizacion correspondiente al elemento depende de su valor en el atributo display (inline, block, etc).
+
+Las propiedades FLOAT Y POSITION nos ayudan a modificar este comportamiento de posicionamiento natural de
+cualquier elemmento existente en el documento HTML.
+
+-float: Convierte un elemento en flotante, haciendo que se desplace hacia la zona mas elevada a la derecha
+    o a la izquierda de donde se encontraba, dependiendo del valor definido en dicha propiedad.
+-clear: Limpia el comportamiento flotante.
+
+Valores propiedad POSITION:
+1.-static         (default)
+2.-Relative
+3.-absolute
+4.-fixed
+5.-sticky
+
+Al aplicarle un elemento un valor diferente de static en la propiedad position
+se activan las siguientes propiedades de posicionammiento de un elemento:
+1.-top
+2.-right
+3.-bottom
+4.-left 
+
+Las propiedades top y left tienen mayor jerarquía, por lo que si estas propiedades
+entran en conflicto con sus contrapartes, tanto right como bottom se verán ignoradas.
+*/
+
+/*
+PROPIEDAD POSITION 
+*/
+.container-position-divs {
+    height: 60px;
+}
+.container-position-divs > div{
+    border: thin dashed black;
+}
+
+/* STATIC
+1.-Es la propiedad por default. */
+.div-static {
+    position: static;
+}
+
+/* RELATIVE
+1.-El elemento mantiene sus dimensiones.
+2.-El elemento mantiene su lugar original en el flujo del DOM, aun si su posicion visual es modificada */
+.div-relative {
+    position: relative;
+    top: -10px;
+    bottom: 50px;
+    left: 150px;
+}
+
+/* ABSOLUTE
+1.-El elemento pierde sus dimensiones.
+2.-El elemento pierde su posición original en el flujo del DOM.
+3.-Cuando el elemento se mueve, puede tomar como referencia dos elementos para establecer su nueva posición visual:
+    -Un ancestro con posicionamiento relativo 
+    -El elemento raíz del documento HTML (etiqueta HTML), siempre y cuando el elemento absolute no tenga un ancestro
+        con position relative. */
+.div-absolute{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.container-relative-position-divs {
+    border: thin dashed black;
+    position: relative;
+    text-align: center;
+    height: 200px;
+    width: 80%;
+}
+
+.container-relative-position-divs > div{
+    border: thin dashed black;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+/* FIXED
+-El elemento pierde sus dimensiones.
+-El elemento pierde su posición original en el flujo del DOM.
+-Cuando el elemento se mueve, toma como referencia el documento HTML, y queda fijo en esa posición en la pantalla,
+    sin importar si el scroll es desplazado o no. */
+.div-fixed {
+    position: fixed;
+}
+
+/* STICKY
+-Es una mezcla entre fixed y relative.
+-Las propiedades top, right, bottom, left no mueven al elemento, son indicadores de referencia, cuando el elemento
+    llega a esa posición en la pantalla, su comportamiento cambia de relative, a fixed.
+-Solo funciona si es hijo directo de la etiqueta body, o su elemento padre debe tener dimensiones definidas, en cuyo
+    caso el efecto sticky solo funcionara dentro de los límites del elemento padre. */
+
+.container-sticky-father {
+    position: absolute;
+    border: thin dashed black;
+    height: 200px;
+    width: 300px;
+    right: 30px;
+    bottom: 150px;
+}
+
+.div-sticky-child {
+    position: sticky;
+    border: thin dashed black;
+    top: 200px;
+}
+
+.div-body-sticky {
+    position: sticky;
+    border: thin dashed black;
+    top: 300px;
+    width: 300px;
+
+    height: 50px;
+}
+
+/* 
+PROPIEDAD Z-INDEX 
+La propiedad z-index ordena los elementos en el eje z (profundidad),
+de modo que cada valor z-index aplicado a un elemento indica
+su posición en las capas de profundidad. 
+Mientras más elevado el valor, más "próximo a la superficie de la pantalla"
+se situa dicho elemento. */
