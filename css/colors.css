@@ -1,0 +1,160 @@
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.main {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.main section{
+    text-align: center;
+}
+
+.s4-img {
+    height: 300px;
+}
+/* 
+COLORES EN CSS
+Hay 4 formas de indicar color a una propiedad de elemmento CSS.
+-Nombre
+-Hexadecimal
+-RGB             RedGreenBlue  (Medios Digitales).  vs CyamMagentaYellowKey (Medios  Impresos).
+-HSL             
+*/
+
+/* 
+COLOR POR NOMBRE
+*/
+.s1-p {
+    background-color: cyan;
+    color: green;
+    border: thick solid navy;
+}
+
+/* 
+COLORES HEXADECIMALES 
+Sistema de 6 dígitos. (123456789abcdefg)
+*/
+.s2-p {
+    background-color: #000000;
+    background-color: #000;
+    background-color: #0000ff;
+    background-color: #0000ff90;    /* Opacidad */
+    color: #ffffff;
+    color: #fff;
+    color: #00ff00;
+    border: thick solid #666666;
+    border-color: #666;
+    border-color: #ff0000;
+}
+
+/* 
+RGB 
+El sistema RGB (Red, Green, Blue) acepta 8 bits por caanal. 
+8 bits (BInary digiTS) = 1 byte.
+                 R                                           G                             B
+1    1    1    1    1    1    1    1               1  1  1  1  1  1  1  1        1  1  1  1  1  1  1  1   
+
+2⁰ + 2¹ + 2² + 2³ + 2⁴ + 2⁵ + 2⁶ + 2⁷ = 255
+*/
+.s3-p {
+    background-color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.5);    /* Opacidad */
+    border: thick solid rgb(0, 0, 0);
+    color: rgb(255, 0, 0);
+}
+
+/* 
+HSL
+HueSaturationLightness (Tono-Saturación-Luminosidad)
+
+Primer valor: Hue  (Círculo cromático).
+0°    ->  red
+60°   ->  yellow
+120°  ->  green
+180°  ->  cyan
+240°  ->  blue
+300°  ->  magenta
+
+Segundo valor: Saturation (Intensidad del Color)
+0%    ->  Escala de grises
+100%  ->  Color puro
+
+Tercer valor: Lightness (Luminosidad del Color)
+0%   ->   negro
+50%  ->   color puro
+100% ->   blanco
+*/
+.s4-p {
+    background-color: hsl(0, 60%, 60%);
+    background-color: hsla(0, 0%, 0%, 0.8);    /* Opacidad */
+    border: thick solid hsl(0, 50%, 50%);
+    color: hsl(0, 0%, 100%);    
+}
+
+/* 
+Transparent & CurrentColor
+transparent: Es  igual a aplicar el color rgba(0, 0, 0, 0).
+currentColor: currentColor es el color que esta definido en el atributo color del elemento.
+    Si el elemento no tiene definidio un valor en el atributo color, este atributo hereda el valor
+    de su ancestro más cercano.*/
+.s5 {
+    background-color: #000080;
+    color: #faebd7;
+    padding: 8px;
+}
+
+.s5-p-transparent {
+    background-color: transparent;
+}
+
+.s5-p-currentcolor {
+    border: thick solid currentColor;
+}
+
+
+/* 
+OPACITY
+Controla la opacidad del elemento.
+El valor de esta propiedad es heredado para todos los elemmentos descendientes del elemento al que se le aplica.
+*/
+.s6 {
+    color: #faebd7;
+    background-color: #000;
+    opacity: .75;
+}

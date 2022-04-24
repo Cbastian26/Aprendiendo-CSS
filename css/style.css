@@ -26,6 +26,17 @@ h1 {
     color: #ffffff;
 }
 
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+}
+
+article {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
 /* 
 Selectores básicos:
 1.- Elementos HTML     Etiquetas         Nombre etiqueta    No recomendado   

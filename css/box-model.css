@@ -4,6 +4,27 @@ code {
     border-radius: 3px;
 }
 
+.header-return {
+    position: fixed;
+    background-color: white;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    left: 5px;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
 h2 {
     text-align: center;
 }

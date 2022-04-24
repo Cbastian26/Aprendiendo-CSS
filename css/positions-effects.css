@@ -7,11 +7,27 @@ h3 {
     margin-bottom: 0;
 }
 
-.back-button-initial {
-    position: absolute;
-    top: 3px;
-    left: 3px;
+.header-return {
+    position: fixed;
+    background-color: steelblue;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    left: 5px;
+    border-radius: 5px;
+    z-index: 600;
 }
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
 .hero-image {
     background-color: steelblue;
     width: 100%;
@@ -27,7 +43,7 @@ h3 {
     padding-top: 25px;
     box-sizing: border-box;
     color: antiquewhite;
-    z-index: 999;
+    z-index: 500;
 }
 
 .slide-title {
@@ -55,23 +71,21 @@ h3 {
     right: 0;
     bottom: 0;
     left: 0;
-    background-color: black;
-    opacity: 0.5;
+    background-color: rgba(0, 0, 0, .5);
     display: none;
-    color: antiquewhite;
     padding-top: 50px;
+    z-index: 700;
 }
 
 .modal-window article {
     position: relative;
-    opacity: none;
-    background-color: red;
+    padding: 8px;
+    border-radius: 7px;
+    background-color: #fff;
     height: 300px;
     width: 400px;
     margin: auto;
-}
-.modal-window a {
-    color: antiquewhite;
+    top: 80px;
 }
 
 .modal-window:target{
