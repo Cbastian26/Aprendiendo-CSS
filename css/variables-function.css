@@ -1,0 +1,112 @@
+:root {
+    --border-navy: medium solid navy;
+    --bg-color: steelblue;
+    --bc: navy;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.main-article {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    text-align: center;
+}
+
+section {
+    text-align: center;
+}
+
+/* 
+CUSTOM PROPERTIES & FUNCTION VAR().
+*/
+.custom-properties-title {
+    color: var(--color);                 /* Las variables funcionan en el elemento definido, o sus descendientes. */
+}
+
+.custom-properties-s {
+    --color: antiquewhite;
+    background-color: var(--bg-color);
+    border: var(--border-navy);
+    color: var(--color);
+}
+
+/* 
+FUNCTIONS
+*/
+.function-url-div {
+    background-image: url(../assets/img/fondo.jpg);
+    height: 15ex;
+    width: 100%;
+}
+
+.function-calc-p {
+    --padding: 2ch;
+    --num-ch: 10ch;
+    background-color: var(--bg-color);
+    display: inline-block;
+    font-size: 2rem;
+    margin: 0;
+    padding: var(--padding);
+    width: calc(var(--num-ch) + var(--padding)*2);
+}
+
+.min-max-p {
+    background-color: var(--bg-color);
+    display: inline-block;
+    width: max(500px, 70vw);
+    border: min(2rem, 3vw) solid var(--bc);
+}
+
+.clamp-p {
+    background-color: var(--bg-color);
+    color: var(--color);
+    display: inline-block;
+    font-size: clamp(1rem, 1rem + 3vw, 3rem);
+    width: clamp(300px, 300px + 60vw, 1800px);
+}

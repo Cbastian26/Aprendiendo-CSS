@@ -1,0 +1,113 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+main {
+    margin: 2rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+li p {
+    border: thin solid black;
+    padding: 1rem;
+}
+
+.p-style {
+    font-style: italic;
+}
+
+.p-variant {
+    font-variant: small-caps;
+}
+
+.p-weight {
+    font-weight: 900;
+}
+
+.p-size {
+    font-size: 2rem;
+}
+
+.p-line-height {
+    line-height: 2;
+}
+
+.p-family {
+    font-family: monospace;
+}
+
+.p-font {
+    font: italic small-caps 900 1rem / 2 monospace;
+}
+
+/*
+External Fonts
+*/
+@font-face {
+    font-family: "pecita";
+    src: url(../assets/fonts/pecita.woff) format("woff");
+    /* src: url(../assets/fonts/pecita.woff) format("woff"),
+       src: url(../assets/fonts/pecita.woff) format("woff"); */
+    font-display: swap;
+}
+.pecita {
+    font-family: "pecita";
+    
+}
+
+@font-face {
+    font-family: "arcade-future";
+    src: url(../assets/fonts/arcade-future.woff) format("woff");
+    font-display: swap;
+}
+
+.arcade-future {
+    font-family: "arcade-future";
+}

@@ -1,3 +1,13 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after, 
+*::before {
+    box-sizing: inherit;
+}
+
 /* Inicio estilos del HEADER */
 .header {
     background: black;
@@ -35,3 +45,123 @@ h1 {
     margin-bottom: 0;
 }
 /* Fin estilos del HEADER */
+
+/* 
+Unidades de Medida en CSS
+Dos tipos:
+1.-Absolutas: 
+        Su valor no cambia (son unidades del mundo real).
+        pc, cm, em, in Q
+        pt (1/72in)
+        px (1/96in)
+
+2.-Relativas:  (Actualmente es más usual y correcto trabajar con este tipo de medidas en pro del responsive design).
+       Su valor es relativo a un contexto.
+       em, rem, ex, ch - relativas al tamaño de la fuente.
+           em:  Basada en la anchura de la "m" de la fuente del elemento.
+           rem: Basada en la anchura de la "m" de la fuente del elemento raíz (html).
+           ex:  Basada en la altura de la "x " de la fuente del elemento.
+           ch:  Basada en la anchura del "0" de la fuente del elemento.
+        
+        %: Relativo al tamaño del contenedor.
+
+        vw, vh, vmax, vmin - relativas al tamaño del viewport.
+            vw:   Ancho del viewport. Va de 0 a 100.
+            vh:   Alto del viewport. Va de 0 a 100.
+            vmax: Toma el mayor valor entre vw y vh.
+            vmin: Toma el menor valor entre vw y vh.
+*/
+
+.main-article {
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    font-size: 24px;
+    font-size: 16px;
+}
+
+section {
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+p {
+    display: inline-block;
+}
+
+.pixels-p {
+    border: 5px solid black;
+    font-size: 20px;
+    font-size: 16px;
+}
+
+/* 1cm = 96px/2.54 */
+.cms-p {
+    border: 1cm solid black;
+    font-size: 0.5cm;
+    font-size: 0.42cm;
+}
+
+.ems-p {
+    border: 1em solid black;
+    font-size: 1em;
+    font-size: 1.5em;
+    font-size: 2rem;
+    font-size: 1.25em;
+    font-size: 1em;
+}
+
+.rems-p {
+    border: 1rem solid black;
+    font-size: 1rem;
+    font-size: 1.5rem;
+    font-size: 2rem;
+    font-size: 1.25rem;
+    font-size: 1rem;
+}
+
+.ex-p {
+    border: 1ex solid black;
+    font-size: 1ex;
+}
+
+.ch-p {
+    margin: 0.6666666ch 0;
+    background-color: navy;
+    color: antiquewhite;
+    width: 10ch;
+    font-size: 48px;
+}
+
+.percentage-p {
+    background-color: aquamarine;                        /* Explicación fenómeno % height*/
+    width: 50%;                           /* Esto ocurre porque el % que se añade es en base al contenedor, en */
+    height: 80%;                          /* este caso, el contenedro de .percentage-p es section, y section */
+    border: 3% solid navy;              /* no tiene un height definido, su heigh es proporcional a los elentos hijos. */
+}                                         
+
+.vw-p {
+    background-color: #65c9c9;          /* Esto añade un scroll en la horizontal, porque el vw tambien incluye el espacio */
+    border: 3vw solid black;            /* que utiliza el scroll Y, ese añadido de scroll X es el el espacio del scroll Y.*/
+    height: 10vw;
+    width: 100vw;                         
+}
+
+.vh-p {
+    background-color: skyblue;
+    border: 3vh solid khaki;
+    height: 20vh;
+    width: 100vh;
+}
+
+.vmin-p {
+    background-color: antiquewhite;
+    border: 3vmin solid black;
+    font-size: 2vmin;
+}
+
+.vmax-p {
+    background-color: aliceblue;
+    border: 3vmax solid navy;
+    font-size: 2vmax;
+}

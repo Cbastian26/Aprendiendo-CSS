@@ -7,6 +7,10 @@ h3 {
     margin-bottom: 0;
 }
 
+h2 {
+    text-align: center;
+}
+
 .header-return {
     position: fixed;
     background-color: steelblue;
@@ -29,7 +33,10 @@ h3 {
 }
 
 .hero-image {
-    background-color: steelblue;
+    background-image: url(../assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
     width: 100%;
     height: 100vh;
 }
