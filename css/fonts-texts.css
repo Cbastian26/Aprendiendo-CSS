@@ -54,11 +54,20 @@ h2 {
     text-align: center;
 }
 
-li p {
+code {
+    background-color: black;
+    border-radius: 3px;
+    color: antiquewhite;
+}
+
+p {
     border: thin solid black;
     padding: 1rem;
 }
 
+/* 
+PROPIEDADES DE FUENTE
+*/
 .p-style {
     font-style: italic;
 }
@@ -90,6 +99,14 @@ li p {
 /*
 External Fonts
 */
+/* font-display: Esta propiedad indica de que forma se deben comportar los textos de fuentes externas mientras
+        la tipografia es cargada en el navegador.
+        auto : El navegador utiliza el método predeterminado, el cual en la mayoría de los casos es block.
+        block : El navegador oculta los textos hasta que la fuente es cargada por completo.
+        swap : El navegador utiliza una fuente alternativa mientras la fuente externa es cargada.
+        fallback : Mezcla de auto y swap. El navegador bloquea por un momento los textos, luego pone la fuente alternativa,
+            y finalmente la fuente externa cuando esta última esta completamente cargada.
+        optional : Es similar a fallback, solo que optional demora más en cada fase del proceso hasta cargar la fuent externa. */
 @font-face {
     font-family: "pecita";
     src: url(../assets/fonts/pecita.woff) format("woff");
@@ -98,7 +115,7 @@ External Fonts
     font-display: swap;
 }
 .pecita {
-    font-family: "pecita";
+    font-family: "pecita", sans-serif;
     
 }
 
@@ -109,5 +126,70 @@ External Fonts
 }
 
 .arcade-future {
-    font-family: "arcade-future";
+    font-family: "arcade-future", monospace;
+}
+
+.changa {
+    font-family: 'Changa', sans-serif;
+}
+
+/*
+PROPIEDADES DE TEXTO
+
+text-align
+text-decoration
+text-indent
+text-overflow
+    overflow: hidden;
+    white-space: nowrap;
+text-transform
+
+letter-spacing
+
+white-space
+
+word-break
+word-spacing
+writing-mode
+*/
+.text-align {
+    text-align: right;
+}
+
+.text-decoration {
+    text-decoration: line-through;
+}
+
+.text-indent {
+    text-indent: 1rem;
+}
+
+.text-overflow {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.text-transform {
+    text-transform: capitalize;
+}
+
+.letter-spacing {
+    letter-spacing: .5rem;
+}
+
+.white-space {
+    white-space: pre-wrap;
+}
+
+.word-break {
+    word-break: break-all;
+}
+
+.word-spacing {
+    word-spacing: 1rem;
+}
+
+.writing-mode {
+    writing-mode: vertical-lr;
 }

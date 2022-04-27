@@ -1,0 +1,81 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.box {
+    background-color: black;
+    height: 400px;
+    margin: 30px auto 30px;
+    width: 400px;
+}
+
+.border-radius-1 {
+    border-radius: 2rem;
+    border-radius: 1rem 2rem;
+    border-radius: 2rem 3rem 4rem;
+    border-radius: 2rem 4rem 6rem 8rem;
+}
+
+.border-radius-2 {
+    border-radius: 50%;
+}
+
+.border-radius-3 {
+    border-radius: 6rem / 12rem;
+    border-radius: 6rem 3rem / 12rem 6rem;
+    border-radius: 6rem 3rem 1rem / 12rem 6rem 2rem;
+    border-radius: 6rem 3rem 1rem 6rem/ 12rem 6rem 2rem 12rem;
+}
+
+.outline {
+    outline: thick solid red;
+    outline-offset: -3rem;
+}
+
+.outline:hover {
+    outline-offset: 1rem;
+}
