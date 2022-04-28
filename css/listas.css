@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.list-1 {
+    list-style-type: armenian;
+    list-style-image: url(../assets/img/fire.jpg);
+    list-style-image: none;
+}
+
+.list-1 li {
+    list-style-type: none;
+}
+
+.list-1 li::before {
+    content: "";
+    display: inline-block;
+    height: 1rem;
+    width: 1rem;
+    background-image: url(../assets/img/fire.jpg);
+    background-size: contain;
+}
+
+.list-2 {
+    list-style-position: inside;
+    list-style-position: outside;
+}
+
+.list-2 li {
+    background-color: #eee;
+}
+
+.list-3 {
+    background-color: khaki;
+    list-style: lower-greek;
+    list-style-position: inside;
+}
+
+.text-column-4 {
+    column-count: 4;
+    column-gap: 2rem;
+    column-rule: thin solid navy;
+    list-style-position: inside;
+    column-width: 150px;
+}
+
+.text-column-5 {
+    margin: 1rem;
+    column-count: 3;
+    column-gap: 2rem;
+    column-rule: thin solid navy;
+    column-width: 150px;
+}

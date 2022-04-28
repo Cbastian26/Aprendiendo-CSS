@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/forms.css">
+    <title>Formularios en CSS</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="header-return">
+            <a href="index.html#header" class="back-button-header">
+                <img src="assets/img/left-arrow-square-svgrepo-com.svg" alt="Back-Arrow" class="return-img-header">
+            </a>
+        </div>
+        <h1>Formularios en CSS</h1>
+    </header>
+    <form action="https://formsubmit.co/cbastian.ctm@gmail.com" method="POST" autocomplete="off" class="form">
+        <input type="text" name="nombre" placeholder="Nombre" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required
+            title="Este campo solo acepta letras y espaciados.">
+        <input type="email" name="email" placeholder="Correo electrónico" pattern="^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$"
+            title="Formato de correo electrónico no válido." required>
+        <textarea name="comentario" cols="30" rows="10" placeholder="Escriba un comentario" required></textarea>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

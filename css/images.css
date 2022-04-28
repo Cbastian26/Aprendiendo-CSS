@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.img {
+    max-width: 100%;
+}
+
+.niña {
+    margin: 1rem 0;
+    min-width: 40%;
+}
+
+.card {
+    border: thin solid black;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    width: 400px;
+}
+
+.card img {
+    width: 100%;
+    border: thin solid black;
+    height: 200px;
+    object-fit: fill;
+    object-fit: contain;
+    object-fit: scale-down;
+    object-fit: cover;
+    object-position: right bottom;
+    object-position: right top;
+    object-position: 50% 50%;
+}
+
+.card h4 {
+    text-align: center;
+}

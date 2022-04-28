@@ -1,0 +1,147 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: absolute;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+/* Fin estilos del HEADER */
+
+.main-section {
+    margin: 2rem;
+}
+
+article {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+code {
+    background-color: black;
+    border-radius: 3px;
+    color: antiquewhite;
+}
+
+.box {
+    border: medium dashed black;
+    height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+}
+
+/*
+BACKGROUND
+*/
+.bg-color {
+    background-color: skyblue;
+}
+
+.bg-image {
+    background-image: url(../assets/img/fondo.jpg);
+}
+
+.bg-size {
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: auto;
+    background-size: 400px auto;
+    background-size: 100% 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-repeat {
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: 400px auto;
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: round;
+    background-repeat: space;
+    background-repeat: unset;
+    background-repeat: no-repeat;
+
+}
+
+.bg-position {
+    background-image: url(../assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.bg-clip {
+    background-image: url(../assets/img/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-clip: border-box;
+    background-clip: padding-box;
+    background-clip: content-box;
+    padding: 1rem;
+}
+
+.bg-origin {
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: 150px auto;
+    background-repeat: no-repeat;
+    background-origin: border-box;
+    background-origin: border-box;
+    background-origin: content-box;
+    padding: 3rem;
+}
+
+.bg-attachment {
+    background-image: url(../assets/img/fondo.jpg);
+    background-size: cover;
+    background-attachment: scroll;
+    background-attachment: fixed;
+}
+
+.bg-multiple {
+    background: url(../assets/img/hsl-circle.png),
+        url(../assets/img/fondo.jpg);
+    background-size: 90% 90%, cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: scroll, fixed;
+}
+
