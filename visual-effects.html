@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/visual-effects.css">
     <title>Efectos Visuales en CSS</title>
 </head>
+
 <body>
     <header class="header">
         <div class="header-return">
@@ -16,19 +18,171 @@
             </a>
         </div>
         <h1>Efectos Visuales en CSS</h1>
-    </header>    
+    </header>
     <main>
         <section>
-            <h2>Shadows</h2>
+            <h2>Sombras</h2>
             <div class="box shadows">
                 <p>Sombra</p>
             </div>
-        </section>
-        <section>
             <div class="box shadows-multiple">
                 <p>Sombra</p>
             </div>
+            <div class="box drop-shadow">
+                <img src="/assets/img/paisaje-arbol.png" alt="">
+            </div>
         </section>
+        <section>
+            <h2>Gradientes</h2>
+            <article>
+                <h3>Linear Gradient</h3>
+                <div class="box linear-gradient"></div>
+            </article>
+            <article>
+                <h3>Radial Gradient</h3>
+                <div class="box radial-gradient"></div>
+            </article>
+            <article>
+                <h3>Conic Gradient</h3>
+                <div class="box conic-gradient"></div>
+            </article>
+            <article>
+                <h3>Patrones con Degradados</h3>
+                <div class="box repeating-linear-gradient"></div>
+                <div class="box repeating-radial-gradient"></div>
+                <div class="box repeating-conic-gradient"></div>
+            </article>
+            <article>
+                <h3>Gráficas con Gradientes</h3>
+                <div class="box circle"></div>
+                <div class="box donut"></div>
+            </article>
+        </section>
+        <section>
+            <h2>Filtros</h2>
+            <article>
+                <h3>Tipos de Filtros</h3>
+                <div class="card">
+                    <img class="filters-types" src="assets/img/landscape-dawn.jpg" alt="Paisaje Amanecer">
+                </div>
+            </article>
+            <article>
+                <h3>Filtros múltiples</h3>
+                <div class="card">
+                    <img class="multiples-filters" src="assets/img/landscape-dawn.jpg" alt="Paisaje Amanecer">
+                </div>
+            </article>
+            <article>
+                <h3>Filtros a Fondos</h3>
+                <div class="card relative">
+                    <img src="assets/img/landscape-dawn.jpg" alt="Paisaje Amanecer">
+                    <div class="card-text">
+                        <h4>Amanecer</h4>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <h3>Filtros Múltiples a Fondos</h3>
+                <div class="card relative">
+                    <img src="assets/img/landscape-dawn.jpg" alt="Paisaje Amanecer">
+                    <div class="card-text multiple-bg-filter">
+                        <h4>Amanecer</h4>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>Modos de Mezcla</h2>
+            <article>
+                <h3>Mezcla de Imágenes</h3>
+                <div class="card relative mix-blend-mode">
+                    <img src="assets/img/landscape-dawn.jpg" alt="Paisaje Amanecer">
+                    <img class="absolute" src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+            </article>
+            <article>
+                <h3>Mezcla de Fondos</h3>
+                <div class="card background-blend-mode"></div>
+            </article>
+        </section>
+        <section>
+            <h2>Máscaras</h2>
+            <article>
+                <div class="card clip-path">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+            </article>
+            <article>
+                <div class="card clip-path-cross">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>Formas (shape-outside)</h2>
+            <article class="shape-outside-article">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <img src="assets/img/landscape-dawn.jpg" alt="Amanecer" class="shape-outside-1 float-left">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <img src="assets/img/edificios.jpg" alt="Edificios" class="shape-outside-2 float-right">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <img src="assets/img/fondo.jpg" alt="Fondo" class="shape-outside-3 float-left">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur quaerat,
+                    veniam, cum vero sequi voluptas fuga perspiciatis fugiat ipsum nemo quod 
+                    quidem dolorem non unde magnam libero in? Unde, quis.
+                </p>
+            </article>
+        </section>
+
     </main>
 </body>
+
 </html>

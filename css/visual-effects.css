@@ -48,8 +48,10 @@ h1 {
 }
 /* Fin estilos del HEADER */
 
-h2 {
+h2,
+h3 {
     text-align: center;
+    margin-bottom: 2rem;
 }
 
 .box {
@@ -57,7 +59,6 @@ h2 {
     font-size: 1.5rem;
     height: 200px;
     margin: 5rem auto;
-    padding: 2rem;
     text-align: center;
     width: 200px;
 }
@@ -80,3 +81,265 @@ h2 {
                  1rem 1rem 0.5rem navy;
 }
 
+.drop-shadow img {
+    width: 190px;
+    height: 190px;
+    object-fit: contain;
+    object-position: bottom;
+    /* drops-shadow: mov-x mov-y blur-radius color; */
+    filter: drop-shadow(-2rem -1rem 0.5rem green);            /* Solo puede haber un drop-shadow por imagen. */
+}
+
+.linear-gradient {
+    background-image: linear-gradient(red, black);
+    background-image: linear-gradient(red, black, blue);
+    background-image: linear-gradient(90deg, red, black, blue);
+    background-image: linear-gradient(120deg, red, black, blue);
+    background-image: linear-gradient(120deg, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to right, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to left, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to top, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to bottom, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to top right, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to top left, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to bottom right, red 33%, black 33% 66%, blue 75%);
+    background-image: linear-gradient(to bottom left, red 33%, black 33% 66%, blue 75%);
+}
+
+.radial-gradient {
+    background-image: radial-gradient(red 50%, white 50%);
+    background-image: radial-gradient(red 33%, black 33% 66%, white 66%);
+    background-image: radial-gradient(circle 4rem, red, black, white);
+    background-image: radial-gradient(circle 4rem, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at top, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at right, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at bottom, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at left, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at top right, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at top left, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at bottom right, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(circle 4rem at bottom left, red 10%, black 10% 15%, white 15%);
+    background-image: radial-gradient(ellipse 7rem 4rem, red 10%, black 20% 45%, white 60%);
+}
+
+.conic-gradient {
+    background-image: conic-gradient(red, black);
+    background-image: conic-gradient(red, green, blue);
+    background-image: conic-gradient(red 120deg, blue 120deg 240deg, white 240deg);
+    background-image: conic-gradient(red 50%, blue 50% 75%, white 75% );
+    background-image: conic-gradient(from 90deg, red 50%, black 50% 75%, white 75% );
+  
+}
+
+.repeating-linear-gradient {
+    background-image: repeating-linear-gradient(red 0px 10px, black 10px 20px);
+    background-image: repeating-linear-gradient(white 0px 10px, navy 10px 20px, skyblue 20px 30px);
+}
+
+.repeating-radial-gradient {
+    background-image: repeating-radial-gradient(navy, white, red, white);
+    background-image: repeating-radial-gradient(circle 1rem, navy 0px 10px, white 10px 20px, red 20px 30px);
+    background-image: repeating-radial-gradient(
+        navy 0 10px,
+        white 10px 20px,
+        steelblue 20px 30px,
+        white 30px 40px,
+        skyblue 40px 50px,
+        white 50px 60px);
+}
+
+.repeating-conic-gradient {
+    background-image: repeating-conic-gradient(navy 0 8%, white 8% 16%,  steelblue 16% 24%);
+}
+
+.circle {
+    background-image: conic-gradient(white 35%, steelblue 25% 82%, navy 82%);
+    border-radius: 50%;
+}
+
+.donut {
+    background-image: radial-gradient(circle , white 3rem, black 3rem 3.3rem, transparent 3rem),
+    conic-gradient(white 35%, steelblue 25% 82%, navy 82%);
+    border-radius: 50%;
+}
+
+
+.card {
+    border: thin solid black;
+    height: 300px;
+    margin: 0 auto 3rem auto;
+    width: 400px;
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card .filters-types {
+    filter: blur(0.5rem);
+    filter: blur(0.25rem);
+    filter: blur(0.15rem);
+    filter: brightness(0.5);
+    filter: brightness(1);
+    filter: contrast(0.1);
+    filter: contrast(0.5);
+    filter: contrast(1);
+    filter: contrast(2);
+    filter: grayscale(0.1);
+    filter: grayscale(0.25);
+    filter: grayscale(0.75);
+    filter: grayscale(1);
+    filter: sepia(0.5);
+    filter: sepia(1);
+    filter: hue-rotate(90deg);
+    filter: hue-rotate(120deg);
+    filter: hue-rotate(180deg);
+    filter: hue-rotate(300deg);
+    filter: opacity(0.75);
+    filter: saturate(0.5);
+    filter: saturate(2);
+    filter: drop-shadow(1rem 1rem 1rem steelblue);
+    filter: invert(0);
+    filter: invert(1);
+}
+
+.card .multiples-filters {
+    filter: blur(.1rem) hue-rotate(90deg) grayscale(.4);
+}
+
+.relative {
+    position: relative;
+}
+
+.relative .card-text {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.card-text h4 {
+    background-color: rgba(240, 230, 140, .5);
+    border-radius: 1rem;
+    backdrop-filter: blur(.1rem);
+    font-size: 3rem;
+    padding: .5rem;
+}
+
+.multiple-bg-filter h4 {
+    backdrop-filter: blur(.1rem) invert(1);    
+}
+
+.absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.mix-blend-mode img {
+    mix-blend-mode: normal;
+    mix-blend-mode: color;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: color-dodge;
+    mix-blend-mode: darken;
+    mix-blend-mode: color-burn;
+    mix-blend-mode: exclusion;
+    mix-blend-mode: hard-light;
+    mix-blend-mode: hue;
+    mix-blend-mode: lighten;
+    mix-blend-mode: luminosity;
+    mix-blend-mode: multiply;
+}
+
+.background-blend-mode {
+    background-image: url(../assets/img/landscape-dawn.jpg),
+                      url(../assets/img/edificios.jpg);
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: normal;
+    background-blend-mode: color;
+    background-blend-mode: color-burn;
+    background-blend-mode: color-dodge;
+    background-blend-mode: darken;
+    background-blend-mode: color-burn;
+    background-blend-mode: exclusion;
+    background-blend-mode: hard-light;
+    background-blend-mode: hue;
+    background-blend-mode: lighten;
+    background-blend-mode: luminosity;
+    background-blend-mode: multiply;
+}
+
+.clip-path {
+    clip-path: circle();
+    clip-path: circle(2rem at top);
+    clip-path: circle(2rem at top left);
+    clip-path: ellipse();
+    clip-path: ellipse(50% 50%);
+    clip-path: ellipse(50% 50% at top);
+    clip-path: ellipse(50% 50% at bottom);
+    clip-path: ellipse(50% 50% at right);
+    clip-path: polygon(0 0, 100% 0, 50% 100%);
+    background-color: black;                             /* No sirve */
+    border: .2rem solid navy;
+}
+
+.clip-path-cross {
+    clip-path: polygon(
+        20% 0%, 
+        0% 20%, 
+        30% 50%, 
+        0% 80%, 
+        20% 100%, 
+        50% 70%, 
+        80% 100%, 
+        100% 80%, 
+        70% 50%, 
+        100% 20%, 
+        80% 0%, 
+        50% 30%);
+}
+
+.shape-outside-article {
+    border: medium solid black;
+    height: 1100px;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 600px;
+}
+
+.shape-outside-article img {
+    clip-path: circle();
+    height: 200px;
+    width: 200px;
+    object-fit: cover;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.shape-outside-1 {
+    margin: 1rem 2rem 1rem 0;
+    shape-outside: circle();
+}
+
+.shape-outside-2 {
+    margin: 1rem 0 1rem 2rem;
+    shape-outside: circle();
+}
+
+.shape-outside-3 {
+    margin: 1rem 2rem 1rem 0;
+    shape-outside: circle();
+}
