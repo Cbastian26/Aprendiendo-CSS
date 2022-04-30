@@ -1,0 +1,428 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: -37px;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.header-return {
+    position: fixed;
+    background-color: #555555;
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.return-img-header {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+.header-return:hover {
+    background-color: antiquewhite;
+}
+
+nav {
+    min-width: 700px;
+    padding: 1rem;
+}
+
+nav a {
+    border-radius: .5rem;
+    color: #888;
+    font-size: .8rem;
+    margin: .7rem;
+    padding: .3rem;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #444;
+    color: antiquewhite;
+}
+
+[id] {
+    scroll-margin-top:4ex;
+}
+
+h3[id] {
+    scroll-margin-top: 8ex;
+}
+
+h1 {
+    color: antiquewhite;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 700px;
+}
+/* Fin estilos del HEADER */
+
+h2,
+h3 {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: .1rem;
+}
+
+section {
+    border-bottom: thick solid black;
+    margin: 0 auto;
+    padding: 1rem 0 0 0;
+}
+
+/*
+DISPLAY
+Tiene 2 valores
+:
+1.-flex: Los elementos con display flex presentan un comportamiento de bloque.
+2.-inline-flex: Los elementos con display inline-flex presentan un comportamiento inline.
+ */
+
+ /* Display: flex */
+ .flexbox {
+    display: flex;
+    color: black;
+    padding: 1rem 0;
+}
+
+.container-1 {
+    background-color: navy;
+    margin-bottom: 0;
+}
+
+.container-2 {
+    background-color: steelblue;
+    margin-bottom: 0;
+}
+
+.flex-item {
+    background-color: skyblue;
+    border: medium solid white;
+    margin-top: .1rem;
+    padding: .5rem;
+}
+
+ /* Display: inline-flex */
+
+.inline-flexbox {
+    display: inline-flex;
+    padding: 1rem;
+}
+
+/* 
+FLEX-DIRECTION
+Define el EJE PRINCIPAL.                                                          Ejes en flexbox.
+Direcciona el sentido de los elementos.               Main axis ---- Eje horizontal (x). ---- Sentido de Izquierda a Derecha.                                              
+4 Valores:                                                                    
+                                                      Cross axis --- Eje vertical (y). ------ Sentido de Arriba hacia Abajo.
+1.row:                                                                         
+    Es el valor por Default.                                         
+    Direcciona los elementos en sentido del MAIN AXIS.        
+2.row-reverse: 
+    Direcciona los elementos en sentido inverso del MAIN AXIS.
+3.column: 
+    Direcciona los elementos en sentido  del CROSS AXIS.
+4.column-reverse: 
+    Direcciona los elementos en sentido inverso del CROSS AXIS. 
+*/
+
+.row {
+    flex-direction: row;
+}
+
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+.column {
+    flex-direction: column;
+}
+
+.column-reverse {
+    flex-direction: column-reverse;
+}
+
+/*
+FLEX-WRAP
+3 valores: 
+
+1.nowrap  (Default).
+2.wrap
+3.wrap-reverse 
+*/
+
+.nowrap div,
+.wrap div,
+.wrap-reverse div {
+    width: 100px;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+.wrap-reverse {
+    flex-wrap: wrap-reverse;
+}
+
+/* 
+FLEX-FLOW
+Shorthand  de flex-direction y flex-wrap.
+*/
+
+.description {
+    text-align: center;
+}
+
+/* 
+JUSTIFY CONTENT
+Define la distribución de los flex items respecto del EJE PRINCIPAL dentro del contenedor.
+6 valores:
+
+1.flex-start           (default)
+2.center
+3.flex-end
+4.space-between
+5.space-around
+6.space-evenly 
+*/
+
+.flex-start {
+    justify-content: flex-start;
+}
+
+.center {
+    justify-content: center;
+}
+
+.flex-end {
+    justify-content: flex-end;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.space-around {
+    justify-content: space-around;
+}
+
+.space-evenly {
+    justify-content: space-evenly;
+}
+
+/* 
+ALIGN ITEMS
+Define la alineación de los flex items en el eje transversal */
+
+.align-items .container-1,
+.align-items .container-2,
+.align-content .container-1,
+.align-content .container-2  {
+    height: 50vh;
+    padding: 0;
+}
+
+.align-items .flex-start {
+    align-items: flex-start;
+}
+
+.align-items .flex-end {
+    align-items: flex-end;
+}
+
+.align-items .center {
+    align-items: center;
+}
+
+.align-items .stretch {
+    align-items: stretch;
+}
+
+.align-items .baseline {
+    align-items: baseline;
+}
+
+.baseline .flex-item:nth-child(2) {
+    font-size: 3rem;
+}
+
+
+.container:nth-child(5) {
+    background-color: black;
+}
+
+.container:nth-child(6) {
+    background-color: white;
+}
+
+/* 
+ALIGN CONTENT
+Alinea los flex-items como conjunto.
+Solo funciona cuando la propiedad flex-wrap es diferente a nowrap.
+7 valores:
+
+1.flex-start
+2.flex-end
+3.center
+4.space-between
+5.space-around
+6.space-evenly
+7.stretch                      (default)
+*/
+.align-content .flexbox {
+    flex-wrap: wrap;
+}
+
+.align-content .flex-start {
+    align-content: flex-start;
+}
+
+.align-content .flex-end {
+    align-content: flex-end;
+}
+
+.align-content .center {
+    align-content: center;
+}
+
+.align-content .space-between {
+    align-content: space-between;
+}
+
+.align-content .space-around {
+    align-content: space-around;
+}
+
+.align-content .space-evenly {
+    align-content: space-evenly;
+}
+
+
+/* 
+FLEX GROW
+Define el factor de crecimiento de los elementos dentro de un container flex.
+Su valor por default es 0.
+NO acepta valores negativos.
+*/
+
+.container-1 .grow {
+    flex-grow: 1;
+}
+
+.container-2 .grow {
+    flex-grow: 1;
+}
+
+.container-2 .grow:nth-child(2) {
+    flex-grow: 3;
+}
+
+/* 
+FLEX-SHRINK
+Define el factor de decrecimiento de los elementos dentro de un container flex.
+Su valor por default es 1.
+*/
+
+.shrink {
+    width: 400px;
+}
+
+.container-1 .shrink {
+    flex-shrink: 1;
+}
+
+.container-1 .shrink {
+    flex-shrink: 1;
+}
+
+.container-2 .shrink:nth-child(2) {
+    flex-shrink: 2;
+}
+
+/* 
+FLEX-BASIS
+Define el tamaño que tendrá la caja del elemento hijo en el EJE PRINCIPAL del container flex
+Tiene mayor especificidad que las propiedades width y height si entra en conflicto con ellas.
+*/
+
+.container-1 .basis {
+    flex-basis: 200px;
+    width: 400px;
+}
+
+.flex-basis .container-2 {
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-2 .basis {
+    flex-basis: 200px;
+    height: 400px;
+}
+
+/* 
+ORDER
+Define la posición de los elementos dentro del container flex.
+El valor por default de esta propiedad en los elementos es 0.
+Mientras menor el valor, mas adelante estará posicionado.
+*/
+
+.container-1 .order:nth-child(2) {
+    order: 1;    
+}
+
+.article-order .container-2 {
+    flex-direction: row-reverse;
+}
+
+.container-2 .order:nth-child(2) {
+    order: 1;
+}
+
+/* 
+ALIGN-SELF
+Igual a alig-items, pero en lugar de aplicarse a toda una linea de elementos, se aplica a un elemento particular.
+Mayor especificidad que align-items.
+*/
+
+.article-align-self .container-1,
+.article-align-self .container-2 {
+    height: 30vh;
+}
+
+.container-1 .align-self:nth-child(3) {
+    align-self: center;
+}
+
+.article-align-self .container-2 {
+    align-items: flex-start;
+}
+
+.container-2 .align-self:nth-child(3) {
+    align-self: center;
+}

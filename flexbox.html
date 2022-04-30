@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/flexbox.css">
+    <title>Flexbox</title>
+</head>
+<body id="init">
+    <header class="header">
+        <div class="header-return">
+            <a href="index.html#header" class="back-button-header">
+                <img src="assets/img/left-arrow-square-svgrepo-com.svg" alt="Back-Arrow" class="return-img-header">
+            </a>
+        </div>
+        <h1>Flexbox</h1>
+        <nav>
+            <a href="flexbox.html#init">Inicio</a>
+            <a href="flexbox.html#flex-direction">flex-direction</a>
+            <a href="flexbox.html#flex-wrap">flex-wrap</a>
+            <a href="flexbox.html#flex-flow">flex-flow</a>
+            <a href="flexbox.html#justify-content">justify-content</a>
+            <a href="flexbox.html#align-items">align-items</a>
+            <a href="flexbox.html#align-content">align-content</a>
+            <a href="flexbox.html#flex-grow">flex-grow</a>
+            <a href="flexbox.html#flex-shrink">flex-shrink</a>
+            <a href="flexbox.html#flex-basis">flex-basis</a>
+            <a href="flexbox.html#flex">flex</a>
+            <a href="flexbox.html#order">order</a>
+            <a href="flexbox.html#align-self">align-self</a>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Display</h2>
+            <article>
+                <h3>Flex</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+                <span style="background-color: black; color: antiquewhite;"  class="flexbox">
+                    Esto es un inline con display flexbox
+                </span>
+            </article>
+            <article>
+                <h3>Inline-flex</h3>
+                <div class="inline-flexbox container-1">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+                <div class="inline-flexbox container-2">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+        </section>
+        <section id="flex-direction">
+            <h2>flex-direction</h2>
+            <article>
+                <h3>row</h3>
+                <div class="flexbox container-1 row">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+            <article>
+                <h3>row-reverse</h3>
+                <div class="flexbox container-2 row-reverse">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+            <article>
+                <h3>column</h3>
+                <div class="flexbox container-1 column">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <span class="flex-item">Flex-item span</span>
+                </div>
+            </article>
+            <article>
+                <h3>column-reverse</h3>
+                <div class="flexbox container-2 column-reverse">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+        </section>
+        <section id="flex-wrap">
+            <h2>flex-wrap</h2>
+            <article>
+                <h3>nowrap</h3>
+                <div class="flexbox container-1 nowrap">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+            </article>
+            <article>
+                <h3>wrap</h3>
+                <div class="flexbox container-2 wrap">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+            <article>
+                <h3>wrap-reverse</h3>
+                <div class="flexbox container-1 wrap-reverse">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+        </section> 
+        <section id="flex-flow"> 
+            <h2>flex-flow</h2>
+            <article class="description">
+                <p>Shorthand de flex-direction | flex-wrap</p>
+            </article>
+        </section>
+        <section id="justify-content">
+            <h2>justify-content</h2>
+            <article>
+                <h3>flex-start</h3>
+                <div class="flexbox container-1 flex-start">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+            </article>
+            <article>
+                <h3>center</h3>
+                <div class="flexbox container-2 center">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+            <article>
+                <h3>flex-end</h3>
+                <div class="flexbox container-1 flex-end">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+            <article>
+                <h3>space-between</h3>
+                <div class="flexbox container-2 space-between">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+            </article>
+            <article>
+                <h3>space-around</h3>
+                <div class="flexbox container-1 space-around">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+            <article>
+                <h3>space-evenly</h3>
+                <div class="flexbox container-2 space-evenly">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                </div>
+                </div>
+            </article>
+        </section> 
+        <section id="align-items">
+            <h2>align-items</h2>
+            <article class="align-items">
+                <h3>flex-start</h3>
+                <div class="flexbox container-1 flex-start">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+            <article class="align-items">
+                <h3>flex-end</h3>
+                <div class="flexbox container-2 flex-end">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+            <article class="align-items">
+                <h3>center</h3>
+                <div class="flexbox container-1 center">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <span class="flex-item">Flex-item span</span>
+                </div>
+            </article>
+            <article class="align-items">
+                <h3>stretch</h3>
+                <div class="flexbox container-2 stretch">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+            <article class="align-items">
+                <h3>baseline</h3>
+                <div class="flexbox container-1 baseline">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                </div>
+            </article>
+        </section>
+        <section id="align-content">
+            <h2>align-content</h2>
+            <article class="align-content">
+                <h3>flex-start</h3>
+                <div class="flexbox container-1 flex-start">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>flex-end</h3>
+                <div class="flexbox container-2 flex-end">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>center</h3>
+                <div class="flexbox container-1 center">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>space-between</h3>
+                <div class="flexbox container-2 space-between">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>space-around</h3>
+                <div class="flexbox container-1 space-around">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>space-evenly</h3>
+                <div class="flexbox container-2 space-evenly">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+            <article class="align-content">
+                <h3>stretch</h3>
+                <div class="flexbox container-1 stretch">
+                    <div class="flex-item">Flex-item 1</div>
+                    <div class="flex-item">Flex-item 2</div>
+                    <div class="flex-item">Flex-item 3</div>
+                    <div class="flex-item">Flex-item 4</div>
+                    <div class="flex-item">Flex-item 5</div>
+                    <div class="flex-item">Flex-item 6</div>
+                    <div class="flex-item">Flex-item 7</div>
+                    <div class="flex-item">Flex-item 8</div>
+                    <div class="flex-item">Flex-item 9</div>
+                    <div class="flex-item">Flex-item 10</div>
+                    <div class="flex-item">Flex-item 11</div>
+                    <div class="flex-item">Flex-item 12</div>
+                    <div class="flex-item">Flex-item 13</div>
+                    <div class="flex-item">Flex-item 14</div>
+                    <div class="flex-item">Flex-item 15</div>
+                    <div class="flex-item">Flex-item 16</div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h2>Propiedades a Hijos</h2>
+            <article>
+                <h3 id="flex-grow">flex-grow</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item grow">Flex-item 1</div>
+                    <div class="flex-item grow">Flex-item 2</div>
+                    <div class="flex-item grow">Flex-item 3</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item grow">Flex-item 1</div>
+                    <div class="flex-item grow">Flex-item 2</div>
+                    <div class="flex-item grow">Flex-item 3</div>
+                </div>
+            </article>
+            <article>
+                <h3 id="flex-shrink">flex-shrink</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item shrink">Flex-item 1</div>
+                    <div class="flex-item shrink">Flex-item 2</div>
+                    <div class="flex-item shrink">Flex-item 3</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item shrink">Flex-item 1</div>
+                    <div class="flex-item shrink">Flex-item 2</div>
+                    <div class="flex-item shrink">Flex-item 3</div>
+                </div>
+            </article>
+            <article class="flex-basis">
+                <h3 id="flex-basis">flex-basis</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item basis">Flex-item 1</div>
+                    <div class="flex-item basis">Flex-item 2</div>
+                    <div class="flex-item basis">Flex-item 3</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item basis">Flex-item 1</div>
+                    <div class="flex-item basis">Flex-item 2</div>
+                    <div class="flex-item basis">Flex-item 3</div>
+                </div>
+            </article>
+            <article class="description">
+                <h3 id="flex">flex</h3>
+                <p>Shorthand de flex-grow | flex-shrink | flex-basis</p>
+            </article>
+            <article class="article-order">
+                <h3 id="order">order</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item order">Flex-item 1</div>
+                    <div class="flex-item order">Flex-item 2</div>
+                    <div class="flex-item order">Flex-item 3</div>
+                    <div class="flex-item order">Flex-item 4</div>
+                    <div class="flex-item order">Flex-item 5</div>
+                    <div class="flex-item order">Flex-item 6</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item order">Flex-item 1</div>
+                    <div class="flex-item order">Flex-item 2</div>
+                    <div class="flex-item order">Flex-item 3</div>
+                    <div class="flex-item order">Flex-item 4</div>
+                    <div class="flex-item order">Flex-item 5</div>
+                    <div class="flex-item order">Flex-item 6</div>
+                </div>
+            </article>
+            <article class="article-align-self">
+                <h3 id="align-self">align-self</h3>
+                <div class="flexbox container-1">
+                    <div class="flex-item align-self">Flex-item 1</div>
+                    <div class="flex-item align-self">Flex-item 2</div>
+                    <div class="flex-item align-self">Flex-item 3</div>
+                    <div class="flex-item align-self">Flex-item 4</div>
+                    <div class="flex-item align-self">Flex-item 5</div>
+                    <div class="flex-item align-self">Flex-item 6</div>
+                </div>
+                <div class="flexbox container-2">
+                    <div class="flex-item align-self">Flex-item 1</div>
+                    <div class="flex-item align-self">Flex-item 2</div>
+                    <div class="flex-item align-self">Flex-item 3</div>
+                    <div class="flex-item align-self">Flex-item 4</div>
+                    <div class="flex-item align-self">Flex-item 5</div>
+                    <div class="flex-item align-self">Flex-item 6</div>
+                </div>
+            </article>
+        </section>
+    </main>
+    
+</body>
+</html>
