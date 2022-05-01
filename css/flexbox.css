@@ -54,6 +54,7 @@ nav a {
     margin: .7rem;
     padding: .3rem;
     text-decoration: none;
+    white-space: nowrap;
 }
 
 nav a:hover {

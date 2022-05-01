@@ -1,0 +1,118 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* INICIO ESTILOS DEL BACK BUTTON */
+.back-btn-container {
+    --btn-bg-color: transparent;
+    --hover-color: #e2cfb6;
+
+    position: fixed;
+    background-color: var(--btn-bg-color);
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    left: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.back-btn-container:hover {
+    background-color: var(--hover-color);
+}
+
+.back-btn-img {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+/* FIN ESTILOS DEL BACK BUTTON */
+
+/* 
+SCROLL-SNAP-TYPE
+3 condiciones:
+1.El contenedor de los slides debe tener un height y width definidos.
+2.EL contenedor de los slides debe tener la propiedad overflow-x/y con valor scroll.
+3.Los slides deben tener un  valor en la propiedad scroll-snap-align.
+
+Requiere 2 valores:
+inline (eje X) | block (eje Y)
+mandatory      | proximity
+*/
+
+.slides{
+    height: 100vh;
+    width: 100%;
+    overflow-y: scroll;
+    scroll-snap-type: block mandatory;
+}
+
+.slide {
+    background-color: #faebd7;
+    height: inherit;
+    width: 100%;
+    scroll-snap-align: center;
+}
+
+.slide:nth-child(odd) {
+    background-color: #108eb4;
+    color: #faebd7;
+}
+
+.slide-content {
+    height: 100vh;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 3vw;
+}
+
+.carousel {
+    border: medium solid #faebd7;
+    height: 25vw;
+    width: 50%;
+    overflow-x: hidden;
+}
+
+.carousel-slides {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 100%);
+    overflow-x: scroll;
+    scroll-snap-type: inline proximity;
+}
+
+.carousel-slide {
+    background-color: #1e2345;
+    height: inherit;
+    width: inherit;
+    scroll-snap-align: center;
+}
+
+.carousel-slide:nth-child(even) {
+    background-color: #faebd7;
+    color: #000;
+}
+
+.carousel-slide-content {
+    height: inherit;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}

@@ -1,0 +1,142 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    --btn-bg-color: #555;
+    --scroll-link-color: #777;
+    --hover-color: #faebd7;
+    --hover-link-bg-color: #555;
+
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: -36.8px;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.back-btn-container {
+    position: fixed;
+    background-color: var(--btn-bg-color);
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.back-btn-container:hover {
+    background-color: var(--hover-color);
+}
+
+.back-btn-img {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+
+h1 {
+    color: #faebd7;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav {
+    padding: .6rem;
+}
+
+.nav a {
+    color: var(--scroll-link-color);
+    margin: 0 3rem;
+    padding: .1rem 1rem;
+}
+
+.nav a:hover {
+    background-color: var(--hover-link-bg-color);
+    border-radius: .2rem;
+    color: var(--hover-color)
+}
+
+section[id] {
+    scroll-margin-top: .5ex;
+}
+/* Fin estilos del HEADER */
+
+.section-container {
+    text-align: center;
+    padding: 2rem;
+}
+
+.grid-container {
+    display: grid;
+    background-color: #3f2c13;
+    margin: 0 auto;
+    height: 39vw;
+    width: 39vw;
+    gap: .3vw;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #faebd7;  
+    font-size: 1vw;  
+}
+
+.explicit-grid .grid-container {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: 10vw repeat(3, 1fr) 5vw;
+    row-gap: 2vw;
+    column-gap: 3vw;
+    gap: .3vw;
+}
+
+.implicit-grid .grid-container {
+    grid-template: 1fr repeat(2, 3fr) / repeat(4, 1fr);
+}
+
+.cell-position .grid-container {
+    grid-template: repeat(6, 1fr) / repeat(4, 1fr); 
+}
+.cell-position .grid-item:nth-child(12) {
+    grid-row-start: 3;    
+    grid-row-end: 5;    
+}
+
+.cell-position .grid-item:nth-child(16) {
+    grid-row-start: 5;    
+    grid-row-end: 7;
+    grid-column-start: 1; 
+    grid-column-end: 3;    
+}
+
+.cell-position .grid-item:first-child {
+    /* VALUES:  grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+    grid-area: 6 / 4 / 7 / 5;    
+}
+
+.cell-position-grid-lines .grid-container {
+    grid-template-rows: [linea-r1] 1fr [linea-r2] 1fr [linea-r3] 1fr [linea-r4];
+    grid-template-columns: [linea-c1] 1fr [linea-c2] 1fr [linea-c3] 1fr [linea-c4] 1fr [linea-c5]  1fr [linea-c6];
+    /* grid-area no funciona correctamente con esta forma de definición por nombre */
+}
+
+.cell-position-grid-areas .grid-container {
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+}

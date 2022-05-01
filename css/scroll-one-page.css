@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    --btn-bg-color: #555;
+    --scroll-link-color: #777;
+    --hover-color: #faebd7;
+    --hover-link-bg-color: #555;
+
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: -36.8px;
+    min-width: 500px;
+    z-index: 100;
+}
+
+.back-btn-container {
+    position: fixed;
+    background-color: var(--btn-bg-color);
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.back-btn-container:hover {
+    background-color: var(--hover-color);
+}
+
+.back-btn-img {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+
+h1 {
+    color: #faebd7;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav {
+    padding: .6rem;
+}
+
+.nav a {
+    color: var(--scroll-link-color);
+    margin: 0 3rem;
+    padding: .1rem 1rem;
+}
+
+.nav a:hover {
+    background-color: var(--hover-link-bg-color);
+    border-radius: .2rem;
+    color: var(--hover-color)
+}
+
+section[id] {
+    scroll-margin-top: 5.5ex;
+}
+/* Fin estilos del HEADER */
+
+.slide {
+    background-color: #faebd7;
+    width: 100%;
+    height: 100vh;
+    padding: 1rem;
+    text-align: center;
+}
+
+.slide:nth-child(odd) {
+    background-color: #1e2345;
+    color: #faebd7;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.slide img {
+    height: auto;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
