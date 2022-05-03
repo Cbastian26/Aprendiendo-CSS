@@ -17,18 +17,22 @@
         </div>
         <h1>Grid</h1>
         <nav class="nav">
-            <a href="grid.html#grid-template">grid-template</a>
-            <a href="grid.html#cell-position">grid-area</a>
-            <a href="grid.html#slide-3">Slide 3</a>
-            <a href="grid.html#slide-4">Slide 4</a>
-            <a href="grid.html#slide-5">Slide 5</a>
+            <a href="grid.html#grid-template">Definición de la Grid</a>
+            <a href="grid.html#cell-position">Posicionamiento de Celdas</a>
+            <a href="grid.html#grid-flow">Flujo de la Grid</a>
+            <a href="grid.html#grid-layers">Superposición de Celdas</a>
+            <a href="grid.html#order">Orden de Items</a>
+            <a href="grid.html#align">Alineamiento de Items</a>
+            <a href="grid.html#minmax">Medidas minmax</a>
+            <a href="grid.html#dynamic-grid">Grid Dinámicos</a>
+            <a href="grid.html#subgrid">Subgrid</a>
         </nav>
     </header>
     <main>
-        <section class="section-container" id="grid-template">
-            <h2>Definición de la Grilla</h2>
+        <section class="section-container grid-template" id="grid-template">
+            <h2>Definición de la Grid</h2>
             <article class="explicit-grid">
-                <h3>Grilla Explícita</h3>
+                <h3>Grid Explícita</h3>
                 <div class="grid-container">
                     <div class="grid-item">Grid Item 1</div>
                     <div class="grid-item">Grid Item 2</div>
@@ -52,7 +56,55 @@
                 </div>
             </article>
             <article class="implicit-grid">
-                <h3>Grilla Implícita</h3>
+                <h3>Grid Implícita</h3>
+                <div class="grid-container">
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
+                    <div class="grid-item">Grid Item 6</div>
+                    <div class="grid-item">Grid Item 7</div>
+                    <div class="grid-item">Grid Item 8</div>
+                    <div class="grid-item">Grid Item 9</div>
+                    <div class="grid-item">Grid Item 10</div>
+                    <div class="grid-item">Grid Item 11</div>
+                    <div class="grid-item">Grid Item 12</div>
+                    <div class="grid-item">Grid Item 13</div>
+                    <div class="grid-item">Grid Item 14</div>
+                    <div class="grid-item">Grid Item 15</div>
+                    <div class="grid-item">Grid Item 16</div>
+                    <div class="grid-item">Grid Item 17</div>
+                    <div class="grid-item">Grid Item 18</div>
+                    <div class="grid-item">Grid Item 19</div>
+                </div>
+            </article>
+            <article class="grid-lines">
+                <h3>Definición por Nombre <small>Grid Lines</small></h3>
+                <div class="grid-container">
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
+                    <div class="grid-item">Grid Item 6</div>
+                    <div class="grid-item">Grid Item 7</div>
+                    <div class="grid-item">Grid Item 8</div>
+                    <div class="grid-item">Grid Item 9</div>
+                    <div class="grid-item">Grid Item 10</div>
+                    <div class="grid-item">Grid Item 11</div>
+                    <div class="grid-item">Grid Item 12</div>
+                    <div class="grid-item">Grid Item 13</div>
+                    <div class="grid-item">Grid Item 14</div>
+                    <div class="grid-item">Grid Item 15</div>
+                    <div class="grid-item">Grid Item 16</div>
+                    <div class="grid-item">Grid Item 17</div>
+                    <div class="grid-item">Grid Item 18</div>
+                    <div class="grid-item">Grid Item 19</div>
+                </div>
+            </article>
+            <article class="grid-repeat">
+                <h3>Definición con Patrones Repetitivos</h3>
                 <div class="grid-container">
                     <div class="grid-item">Grid Item 1</div>
                     <div class="grid-item">Grid Item 2</div>
@@ -76,9 +128,9 @@
                 </div>
             </article>
         </section>
-        <section class="section-container" id="cell-position">
+        <section class="section-container cell-position" id="cell-position">
             <h2>Posicionamiento de celdas</h2>
-            <article class="cell-position">
+            <article class="grid-row-column">
                 <h3>grid-row/column</h3>
                 <div class="grid-container">
                     <div class="grid-item">Grid Item 1</div>
@@ -102,8 +154,20 @@
                     <div class="grid-item">Grid Item 19</div>
                 </div>
             </article>
-            <article class="cell-position-grid-lines">
-                <h3>Posicionamiento por Nombre <small>Grid Lines</small></h3>
+            <article class="grid-areas">
+                <h3>Posicionamiento por Nombre <small>Grid Areas</small></h3>
+                <div class="grid-container">
+                    <div class="grid-item item-header">Header</div>
+                    <div class="grid-item item-main">Content</div>
+                    <div class="grid-item item-aside">Aside</div>
+                    <div class="grid-item item-footer">Footer</div>
+                </div>
+            </article>
+        </section>
+        <section class="section-container grid-flow" id="grid-flow">
+            <h2>Flujo de la Grid</h2>
+            <article class="row">
+                <h3>Rows</h3>
                 <div class="grid-container">
                     <div class="grid-item">Grid Item 1</div>
                     <div class="grid-item">Grid Item 2</div>
@@ -126,16 +190,218 @@
                     <div class="grid-item">Grid Item 19</div>
                 </div>
             </article>
-            <article class="cell-position-grid-areas">
-                <h3>Posicionamiento por Nombre <small>Grid Areas</small></h3>
+            <article class="column">
+                <h3>Columns</h3>
                 <div class="grid-container">
-                    <div class="grid-item header">Grid Item 1</div>
-                    <div class="grid-item content">Grid Item 2</div>
-                    <div class="grid-item aside">Grid Item 3</div>
-                    <div class="grid-item footer">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
+                    <div class="grid-item">Grid Item 6</div>
+                    <div class="grid-item">Grid Item 7</div>
+                    <div class="grid-item">Grid Item 8</div>
+                    <div class="grid-item">Grid Item 9</div>
+                    <div class="grid-item">Grid Item 10</div>
+                    <div class="grid-item">Grid Item 11</div>
+                    <div class="grid-item">Grid Item 12</div>
+                    <div class="grid-item">Grid Item 13</div>
+                    <div class="grid-item">Grid Item 14</div>
+                    <div class="grid-item">Grid Item 15</div>
+                    <div class="grid-item">Grid Item 16</div>
+                    <div class="grid-item">Grid Item 17</div>
+                    <div class="grid-item">Grid Item 18</div>
+                    <div class="grid-item">Grid Item 19</div>
+                </div>
+            </article>
+            <article class="dense-row">
+                <h3>Dense rows</h3>
+                <div class="grid-container">
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
+                    <div class="grid-item">Grid Item 6</div>
+                    <div class="grid-item">Grid Item 7</div>
+                    <div class="grid-item">Grid Item 8</div>
+                    <div class="grid-item">Grid Item 9</div>
+                    <div class="grid-item">Grid Item 10</div>
+                    <div class="grid-item">Grid Item 11</div>
+                    <div class="grid-item">Grid Item 12</div>
+                    <div class="grid-item">Grid Item 13</div>
+                    <div class="grid-item">Grid Item 14</div>
+                    <div class="grid-item">Grid Item 15</div>
+                    <div class="grid-item">Grid Item 16</div>
+                    <div class="grid-item">Grid Item 17</div>
+                    <div class="grid-item">Grid Item 18</div>
+                    <div class="grid-item">Grid Item 19</div>
+                </div>
+            </article>
+            <article class="dense-column">
+                <h3>Dense columns</h3>
+                <div class="grid-container">
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
+                    <div class="grid-item">Grid Item 6</div>
+                    <div class="grid-item">Grid Item 7</div>
+                    <div class="grid-item">Grid Item 8</div>
+                    <div class="grid-item">Grid Item 9</div>
+                    <div class="grid-item">Grid Item 10</div>
+                    <div class="grid-item">Grid Item 11</div>
+                    <div class="grid-item">Grid Item 12</div>
+                    <div class="grid-item">Grid Item 13</div>
+                    <div class="grid-item">Grid Item 14</div>
+                    <div class="grid-item">Grid Item 15</div>
+                    <div class="grid-item">Grid Item 16</div>
+                    <div class="grid-item">Grid Item 17</div>
+                    <div class="grid-item">Grid Item 18</div>
+                    <div class="grid-item">Grid Item 19</div>
+                </div>
+            </article>
+        </section>
+        <section class="section-container grid-layers" id="grid-layers">
+            <h2>Superposición de Celdas</h2>
+            <article class="">
+                <div class="grid-container">
+                    <div class="grid-item">Grid Item 1</div>
+                    <div class="grid-item">Grid Item 2</div>
+                    <div class="grid-item">Grid Item 3</div>
+                    <div class="grid-item">Grid Item 4</div>
+                    <div class="grid-item">Grid Item 5</div>
                 </div>
             </article>
         </section>
     </main>
+    <section class="section-container order" id="order">
+        <h2>Orden de Items</h2>
+        <article class="">
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+    </section>
+    <section class="section-container align" id="align">
+        <h2>Alineamientos</h2>
+        <article class="items-align">
+            <h3>Alineamiento de Items</h3>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+        <article class="tracks-align">
+            <h3>Alineamiento de Tracks</h3>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+    </section>
+    <section class="section-container minmax" id="minmax">
+        <h2>Medidas minmax</h2>
+        <article class="minmax-function">
+            <h2>Función minmax()</h2>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+        <article class="min-max-units">
+            <h2>Medidas min-content & max-content</h2>
+            <div class="grid-container">
+                <div class="grid-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Repudiandae ut quas odit itaque, sapiente obcaecati! Possimus nisi minima 
+                    quo laborum deleniti nobis sint placeat dolores, labore eaque nam tenetur? 
+                    Ipsam.
+                </div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+    </section>
+    <section class="section-container dynamic-grid" id="dynamic-grid">
+        <h2>Grid Dinámicos</h2>
+        <article class="auto-fill">
+            <h2>auto-fill</h2>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+        <article class="auto-fit">
+            <h2>auto-fit</h2>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+        <article class="dynamic-example">
+            <h3>Ejemplo Grid Dinámica</h3>
+            <div class="grid-container">
+                <div class="grid-item">Grid Item 1</div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+                <div class="grid-item">Grid Item 6</div>
+                <div class="grid-item">Grid Item 7</div>
+                <div class="grid-item">Grid Item 8</div>
+                <div class="grid-item">Grid Item 9</div>
+                <div class="grid-item">Grid Item 10</div>
+                <div class="grid-item">Grid Item 11</div>
+                <div class="grid-item">Grid Item 12</div>
+                <div class="grid-item">Grid Item 13</div>
+                <div class="grid-item">Grid Item 14</div>
+                <div class="grid-item">Grid Item 15</div>
+                <div class="grid-item">Grid Item 16</div>
+                <div class="grid-item">Grid Item 17</div>
+                <div class="grid-item">Grid Item 18</div>
+                <div class="grid-item">Grid Item 19</div>
+            </div>
+        </article>
+    </section>
+    <section class="section-container" id="subgrid">
+        <h2>Subgrid</h2>
+        <article class="subgrid">
+            <div class="grid-container grandfather">
+                <div class="grid-item father">
+                    <div class="grid-item son">Grid Item1</div>
+                    <div class="grid-item son">Grid Item2</div>
+                    <div class="grid-item son">Grid Item3</div>
+                    <div class="grid-item son">Grid Item4</div>
+                    <div class="grid-item son">Grid Item5</div>
+                </div>
+                <div class="grid-item">Grid Item 2</div>
+                <div class="grid-item">Grid Item 3</div>
+                <div class="grid-item">Grid Item 4</div>
+                <div class="grid-item">Grid Item 5</div>
+            </div>
+        </article>
+    </section>
 </body>
 </html>

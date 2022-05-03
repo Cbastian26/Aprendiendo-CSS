@@ -1,0 +1,161 @@
+html {
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+/* Inicio estilos del HEADER */
+.header {
+    --btn-bg-color: #555;
+    --scroll-link-color: #777;
+    --hover-color: #faebd7;
+    --hover-link-bg-color: #555;
+
+    background: black;
+    padding: 5px 5px;
+    text-align: center;
+    position: sticky;
+    top: -36.8px;
+    min-width: 900px;
+    z-index: 100;
+}
+
+.back-btn-container {
+    position: fixed;
+    background-color: var(--btn-bg-color);
+    height: 30px;
+    width: 30px;
+    top: 10px;
+    border-radius: 5px;
+    z-index: 200;
+}
+
+.back-btn-container:hover {
+    background-color: var(--hover-color);
+}
+
+.back-btn-img {
+    position: relative;
+    height: 30px;
+    width: 30px;
+}
+
+
+h1 {
+    color: #faebd7;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.nav {
+    padding: .6rem;
+}
+
+.nav a {
+    color: var(--scroll-link-color);
+    margin: 0 1rem;
+    padding: .1rem 1rem;
+}
+
+.nav a:hover {
+    background-color: var(--hover-link-bg-color);
+    border-radius: .2rem;
+    color: var(--hover-color)
+}
+
+section[id] {
+    scroll-margin-top: 3ex;
+}
+/* Fin estilos del HEADER */
+
+section {
+    text-align: center;
+}
+
+.box {
+    height: 15vw;
+    width: 15vw;
+    border: medium solid black;
+    margin: 0 auto;
+}
+
+.box.transition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: transparent;
+}
+
+.box.transition:hover {
+    background-color: #1e2345;
+    border-radius: 50%;
+    color: #faebd7;
+    font-size: 3rem;
+    transition-property: background-color;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    transition-delay: 2s;
+    transition: border-radius 500ms ease 2s;
+    transition: all 500ms ease 2s;
+    transition: background-color 1000ms ease,
+    border-radius 1000ms ease,
+    color 1000ms ease,
+    font-size 1000 ease;
+}
+
+/* 
+2D TRANSFORMATIONS
+*/
+
+.container {
+    perspective: 1900px;
+    perspective-origin: 0px -300px;
+    margin: auto;
+}
+
+
+.transformations-3d{
+    margin-top: 14rem;
+    transform-style: preserve-3d;
+    transform: rotateY(0deg);
+    animation: 5s infinite linear;
+}
+
+.box-side {
+    height: 300px;
+    width: 300px;
+    position: absolute;
+    opacity: .3;
+}
+
+.side-1 {
+    background-color: green;
+    transform: rotateY(0) translateZ();
+}
+
+.side-2 {
+    background-color: navy;
+    transform: rotateY(90deg) translateZ(150px) translateX(150px);
+}
+
+.side-3 {
+    background-color: navy;
+    transform: rotateY(-90deg) translateX(-150px);
+}
+
+.side-4 {
+    background-color: green;
+    transform: rotateY(180deg) translateZ(300px);
+}
+
+
+
+
+
