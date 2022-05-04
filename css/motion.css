@@ -3,6 +3,7 @@ html {
     font-family: sans-serif;
     font-size: 16px;
     scroll-behavior: smooth;
+    --rotateSpeed:  30s;
 }
 
 *,
@@ -70,8 +71,8 @@ h1 {
     color: var(--hover-color)
 }
 
-section[id] {
-    scroll-margin-top: 3ex;
+[id] {
+    scroll-margin-top: 6ex;
 }
 /* Fin estilos del HEADER */
 
@@ -97,13 +98,13 @@ section {
     background-color: #1e2345;
     border-radius: 50%;
     color: #faebd7;
-    font-size: 3rem;
+    font-size: 3vw;
     transition-property: background-color;
     transition-duration: 500ms;
     transition-timing-function: ease;
     transition-delay: 2s;
     transition: border-radius 500ms ease 2s;
-    transition: all 500ms ease 2s;
+    transition: all 500ms ease 1s;
     transition: background-color 1000ms ease,
     border-radius 1000ms ease,
     color 1000ms ease,
@@ -113,46 +114,390 @@ section {
 /* 
 2D TRANSFORMATIONS
 */
-
-.container {
-    perspective: 1900px;
-    perspective-origin: 0px -300px;
+.transformation-2d .translate,
+.transformation-2d .scale, 
+.transformation-2d .rotate,
+.transformation-2d .skew,
+.transformation-2d .matrix {
+    border: thin dashed black;
+    height: 300px;
+    width: 400px;
     margin: auto;
 }
 
-
-.transformations-3d{
-    margin-top: 14rem;
-    transform-style: preserve-3d;
-    transform: rotateY(0deg);
-    animation: 5s infinite linear;
+.transformation-2d .translate img,
+.transformation-2d .scale img,
+.transformation-2d .rotate img,
+.transformation-2d .skew img,
+.transformation-2d .matrix img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
 }
 
-.box-side {
+.translate-x img {
+    transition: transform 1000ms ease;
+}
+
+.translate-x img:hover {
+    transform: translateX(100px);
+}
+
+.translate-y img {
+    transition: transform 1000ms ease;
+}
+
+.translate-y img:hover {
+    transform: translateY(100px);
+}
+
+
+.translate-z img {
+    transition: transform 1000ms ease;
+}
+
+.translate-z img:hover {
+    transform: translateZ(100px);
+}
+
+.translate-xy img {
+    transition: transform 1000ms ease;
+}
+
+.translate-xy img:hover {
+    transform: translate(50%, 50%);
+}
+
+.scale-x img {
+    transition: transform 1000ms ease;
+}
+
+.scale-x img:hover {
+    transform: scaleX(2);
+}
+
+.rotate-x img {
+    transition: transform 1000ms ease;
+}
+
+.rotate-x img:hover {
+    transform: rotateX(90deg);
+}
+
+.rotate-z img {
+    transition: transform 1000ms ease;
+}
+
+.rotate-z img:hover {
+    transform: rotateZ(360deg);
+}
+
+.skew-x img {
+    transition: transform 1000ms ease;
+}
+
+.skew-x img:hover {
+    transform: skewX(20deg);
+}
+
+.skew-y img {
+    transition: transform 1000ms ease;
+}
+
+.skew-y img:hover {
+    transform: skewY(20deg);
+}
+
+.matrix img {
+    transition: transform 1000ms ease;
+}
+
+.matrix img:hover {
+    transform: matrix(1, 2, 2, 1, 20, 10);
+}
+
+
+
+/* 
+3D TRANSFORMATION
+Se debe activar la perspectiva.
+*/
+.transformation-3d .translate-z {
+    border: thin dashed black;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    perspective: 700px;
+}
+
+.transformation-3d .translate-z img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.translate-z img {
+    transition: transform 1000ms ease;
+}
+
+.translate-z img:hover {
+    transform: translateZ(100px);
+}
+
+.transformation-3d .translate-xyz {
+    border: thin dashed black;
+    height: 300px;
+    width: 400px;
+    margin: auto;
+    perspective: 700px;
+}
+
+.transformation-3d .translate-xyz img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.translate-xyz img {
+    transition: transform 1000ms ease;
+}
+
+.translate-xyz img:hover {
+    transform: translate3d(100px, 100px, 200px);
+}
+
+.cube-scene {
+    margin: auto;
+    height: 400px;
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 850px;
+    perspective-origin: 50% calc(50% - 200px);
+}
+
+.cube {
+    margin: auto;
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+}
+
+.cube div {
+    background-color: #1e234570;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    height: inherit;
+    width: inherit;
+    color: white;
+}
+
+.cube div:nth-child(1) {
+    transform: translateZ(100px);
+}
+
+.cube div:nth-child(2) {
+    transform: rotateY(90deg) translateZ(100px);        
+}
+
+.cube div:nth-child(3) {
+    transform: translateZ(-100px) rotateY(180deg);    
+}
+
+.cube div:nth-child(4) {
+    transform: rotateY(-90deg) translateZ(100px); 
+}
+
+.cube div:nth-child(even) {
+    background-color: #ff000070;
+}
+
+/* Rotate-X 3d */
+.rotatex-3d {
+    transition: transform 3s ease;
+}
+
+.rotatex-3d:hover {
+    transform: rotateX(180deg);
+}
+
+.rotatey-3d {
+    transition: transform 3s ease;
+}
+
+.rotatey-3d:hover {
+    transform: rotateY(180deg);
+}
+
+.rotate3d {
+    transition: transform 3s ease;
+}
+
+.rotate3d:hover {
+    transform: rotate3d(0, 1, 0.5, 3.142rad);
+}
+
+.matrix3d {
+    transition: transform 3s ease;
+}
+
+.matrix3d:hover {
+    transform: matrix3d(1,0,0,0,0,1,6,0,0,0,1,0,50,100,0,1.1);
+}
+
+.transform-origin {
+    transform-origin: top right 240px;
+    transition: transform 3s ease;
+}
+
+.transform-origin:hover {
+    transform: rotateY(180deg);
+}
+
+.flip-card {
+    height: 50vh;
+    width: 25vh;
+    margin: auto;
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 3s ease;
+    perspective: 160px;
+    transform-origin: center right;
+}
+
+.card-side {
+    border: medium solid #1e2345;
+    height: inherit;
+    width: inherit;
+    position: absolute;
+    backface-visibility: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+.front-side img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 70%;   
+}
+
+.back-side img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 20%;   
+}
+
+.back-side {
+    transform: rotateY(180deg);
+
+}
+
+.card-side p {
+    position: absolute;
+}
+
+
+.flip-card:hover {
+    transform: rotateY(180deg) translateX(100%) translateZ(50vh);
+}
+
+/*
+ANIMMATION
+*/
+.cube-3d {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cubo-container {   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    width: 70vh;
+    perspective: 950px;
+    perspective-origin: 50% calc(50% - 300px);
+    padding-bottom: 15vh;
+}
+
+.cubo{
     height: 300px;
     width: 300px;
+    transform-style: preserve-3d;
+    position: relative;
+    animation: sceneRotateY 30s infinite linear;
+
+}
+@keyframes sceneRotateY {
+    to { transform: rotateY(360deg); }
+}
+
+    
+
+.box-side {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin: auto;
     position: absolute;
-    opacity: .3;
+    font-size: 4vw;
+    color: white;
+    box-shadow: 0 0 150px #000a inset;
+    background-color: #00008080;
+}
+
+.box-side:nth-child(even) {
+    color: black;
+    background-color: #ff000070;
 }
 
 .side-1 {
-    background-color: green;
-    transform: rotateY(0) translateZ();
+    transform: translateZ(150px);
 }
 
 .side-2 {
-    background-color: navy;
-    transform: rotateY(90deg) translateZ(150px) translateX(150px);
+    transform: rotateY(90deg) translateZ(150px);
+}
+
+.side-2:hover {
+    background-image: url(../assets/img/landscape-dawn.jpg);
+    background-size: cover;
+    background-position: center;
 }
 
 .side-3 {
-    background-color: navy;
-    transform: rotateY(-90deg) translateX(-150px);
-}
+    transform: translateZ(-150px) rotateY(180deg) ;
+}   
 
 .side-4 {
-    background-color: green;
-    transform: rotateY(180deg) translateZ(300px);
+    transform: rotateY(-90deg) translateZ(150px); 
+    
+}
+
+.side-4:hover {
+    background-image: url(../assets/img/devilman.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.side-5 {
+    transform: translateY(150px) rotateX(-90deg);
+}
+
+.side-6 {
+    transform: translateY(-150px) rotateX(90deg);
 }
 
 

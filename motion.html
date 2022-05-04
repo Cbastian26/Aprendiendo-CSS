@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/motion.css">
     <title>Movimiento en CSS</title>
 </head>
-<body>
+<body id="init">
     <header class="header">
         <div class="back-btn-container">
             <a href="index.html#header" class="back-btn-link">
@@ -17,10 +17,14 @@
         </div>
         <h1>Movimiento en CSS</h1>
         <nav class="nav">           
+            <a href="motion.html#init">Inicio</a>
+            <a href="motion.html#transition">Transiciones</a>
+            <a href="motion.html#transform">Transformaciones</a>
+            <a href="motion.html#animation">Animaciones</a>
         </nav>
     </header>
     <main>
-        <section>
+        <section id="transition">
             <h2>Transiciones</h2>
             <article class="transition">
                 <h3>transition</h3>
@@ -29,20 +33,134 @@
                 </div>
             </article>
         </section>
-        <section>
+        <section id="transform">
             <h2>Transformaciones</h2>
-            <article class="2d-transformations">
-                <h3>Transformaciones en 2D</h3>
+            <article class="transformation-2d">
+                <h3>Transformaciones 2D</h3>
+                <h4>translateX()</h4>
+                <div class="translate translate-x">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>translateY()</h4>
+                <div class="translate translate-y">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>translateZ()</h4>
+                <div class="translate translate-z">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>translate()</h4>
+                <div class="translate translate-xy">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>scaleX()</h4>
+                <div class="scale scale-x">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>rotateX()</h4>
+                <div class="rotate rotate-x">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>rotate() | rotateZ()</h4>
+                <div class="rotate rotate-z">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>skewX()</h4>
+                <div class="skew skew-x">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>skewY()</h4>
+                <div class="skew skew-y">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h4>matrix()</h4>
+                <div class="matrix matrix">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
             </article>
-            <div class="container">
-                <article class="transformations-3d">
-                    <div class="box-side side-1">Side 1</div>
-                    <div class="box-side side-2">Side 2</div>
-                    <div class="box-side side-3">Side 3</div>
-                    <div class="box-side side-4">Side 4</div>
-                </article>
-
-            </div>
+            <h2>Transformaciones 3D</h2>
+            <article class="transformation-3d">
+                <h3>translateZ()</h3>
+                <div class="translate translate-z">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h3>translateXYZ()</h3>
+                <div class="translate translate-xyz">
+                    <img src="assets/img/edificios.jpg" alt="Edificios">
+                </div>
+                <h3>rotateX() en modelo 3D</h3>
+                <div class="cube-scene">
+                    <div class="cube rotatex-3d">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <h3>rotateY() en modelo 3D</h3>
+                <div class="cube-scene">
+                    <div class="cube rotatey-3d">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <h3>rotate3d() en modelo 3D</h3>
+                <div class="cube-scene">
+                    <div class="cube rotate3d">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <h3>matrix3d()</h3>
+                <div class="cube-scene">
+                    <div class="cube matrix3d">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <h3>transform-origin</h3>
+                <div class="cube-scene">
+                    <div class="cube transform-origin">
+                        <div>1</div>
+                        <div>2</div>
+                        <div>3</div>
+                        <div>4</div>
+                    </div>
+                </div>
+                <h3>Flip Card</h3>
+                <div class="flip-card">
+                    <div class="card-side front-side">
+                        <img src="assets/img/devilman.jpg" alt="">
+                        <p>Hola</p>
+                    </div>
+                    <div class="card-side back-side">
+                        <img src="assets/img/devilman.jpg" alt="">
+                        <p>Adios</p>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+        <h2 id="animation">Animaciones</h2>
+            <article class="cube-3d">
+                <div class="cubo-container">
+                    <div class="cubo">
+                        <div class="box-side side-1">Side 1</div>
+                        <div class="box-side side-2">Side 2</div>
+                        <div class="box-side side-3">Side 3</div>
+                        <div class="box-side side-4">Side 4</div>
+                        <div class="box-side side-5">Side 5</div>
+                        <div class="box-side side-6">Side 6</div>
+                    </div>
+                </div>
+            </article>
+    
         </section>
     </main>
 </body>
