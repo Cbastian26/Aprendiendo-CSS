@@ -412,7 +412,86 @@ Se debe activar la perspectiva.
 
 /*
 ANIMMATION
+animation: name  duration  timing-function  delay  iteration-count direction fill-mode. play state(javascript).
+name y duración son los únicos obligatorios
 */
+.cube-animation {
+    transform-origin: 0% 0%;
+    animation-name: rotateY;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    /* https://cubic-bezier.com */
+    animation-timing-function: cubic-bezier(.26,.42,.4,-0.23);
+    animation-timing-function: linear;
+    animation-delay: 0;
+    animation-iteration-count: 4;
+    animation-direction: normal;
+    animation-direction: reverse;
+    animation-direction: alternate;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: none;
+    /* Al termino de la animación, el elemento conserva los cambios sufridos en esta. */
+    animation-fill-mode: forwards;
+    animation-fill-mode: backwards;
+    animation-fill-mode: both;
+    animation-play-state: paused;
+    animation-play-state: running;
+    animation: rotateY 1s cubic-bezier(.26,.42,.4,-0.23) infinite alternate both;
+}
+
+@keyframes rotateY {
+    from {transform: rotateY(0deg);}
+    to {transform: rotateY(180deg);}    
+}
+
+.keyframes .cube {
+    animation: giroX 4s linear infinite;
+}
+
+@keyframes giroX {
+    0% { transform: rotateX(0deg); }    
+    18.75% { transform: rotateX(-35deg); }    
+    31.25% { transform: rotateX(-145deg); }    
+    68.75% { transform: rotateX(-215deg); }    
+    81.25% { transform: rotateX(-325deg); }  
+    100% { transform: rotateX(-360deg); }    
+}
+
+/* 
+Multi Animation
+*/
+.multi-animation .cube {
+    animation: giroY 4s infinite, giroX-multiple 4s infinite;
+}
+
+@keyframes giroY {
+    0% { transform: rotateY(0deg); }      
+    50% { transform: rotateY(1440deg); }        
+}
+
+@keyframes giroX-multiple {
+    50% { transform: rotateX(0deg); }      
+    100% { transform: rotateX(-360deg); }        
+}
+
+@keyframes giroYYYY {
+    50% { transform: rotateY(0deg); }    
+    53.125% { transform: rotateY(-55deg); }    
+    71.875% { transform: rotateY(-115deg); }    
+    78.125% { transform: rotateY(-225deg); }    
+    96.875% { transform: rotateY(-295deg); }  
+    100% { transform: rotateY(-360deg); }        
+}
+
+@keyframes giroXXXX {
+    0% { transform: rotateX(0deg); }    
+    9.375% { transform: rotateX(-35deg); }    
+    15.625% { transform: rotateX(-145deg); }    
+    34.375% { transform: rotateX(-215deg); }    
+    40.625% { transform: rotateX(-325deg); }  
+    50% { transform: rotateX(-360deg); }    
+}
+
 .cube-3d {
     display: flex;
     justify-content: center;
@@ -436,7 +515,6 @@ ANIMMATION
     transform-style: preserve-3d;
     position: relative;
     animation: sceneRotateY 30s infinite linear;
-
 }
 @keyframes sceneRotateY {
     to { transform: rotateY(360deg); }
@@ -499,8 +577,3 @@ ANIMMATION
 .side-6 {
     transform: translateY(-150px) rotateX(90deg);
 }
-
-
-
-
-
